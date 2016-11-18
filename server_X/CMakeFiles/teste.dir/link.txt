@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/teste.dir/src/X/Xapp.cpp.o CMakeFiles/teste.dir/src/test.cpp.o  -o bin/teste -rdynamic 
