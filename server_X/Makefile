@@ -123,32 +123,167 @@ teste/fast:
 	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/build
 .PHONY : teste/fast
 
-src/X/Xapp.o: src/X/Xapp.cpp.o
+src/App.o: src/App.cpp.o
 
-.PHONY : src/X/Xapp.o
+.PHONY : src/App.o
 
 # target to build an object file
-src/X/Xapp.cpp.o:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/Xapp.cpp.o
-.PHONY : src/X/Xapp.cpp.o
+src/App.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/App.cpp.o
+.PHONY : src/App.cpp.o
 
-src/X/Xapp.i: src/X/Xapp.cpp.i
+src/App.i: src/App.cpp.i
 
-.PHONY : src/X/Xapp.i
+.PHONY : src/App.i
 
 # target to preprocess a source file
-src/X/Xapp.cpp.i:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/Xapp.cpp.i
-.PHONY : src/X/Xapp.cpp.i
+src/App.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/App.cpp.i
+.PHONY : src/App.cpp.i
 
-src/X/Xapp.s: src/X/Xapp.cpp.s
+src/App.s: src/App.cpp.s
 
-.PHONY : src/X/Xapp.s
+.PHONY : src/App.s
 
 # target to generate assembly for a file
-src/X/Xapp.cpp.s:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/Xapp.cpp.s
-.PHONY : src/X/Xapp.cpp.s
+src/App.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/App.cpp.s
+.PHONY : src/App.cpp.s
+
+src/Display.o: src/Display.cpp.o
+
+.PHONY : src/Display.o
+
+# target to build an object file
+src/Display.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Display.cpp.o
+.PHONY : src/Display.cpp.o
+
+src/Display.i: src/Display.cpp.i
+
+.PHONY : src/Display.i
+
+# target to preprocess a source file
+src/Display.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Display.cpp.i
+.PHONY : src/Display.cpp.i
+
+src/Display.s: src/Display.cpp.s
+
+.PHONY : src/Display.s
+
+# target to generate assembly for a file
+src/Display.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Display.cpp.s
+.PHONY : src/Display.cpp.s
+
+src/Window.o: src/Window.cpp.o
+
+.PHONY : src/Window.o
+
+# target to build an object file
+src/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Window.cpp.o
+.PHONY : src/Window.cpp.o
+
+src/Window.i: src/Window.cpp.i
+
+.PHONY : src/Window.i
+
+# target to preprocess a source file
+src/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Window.cpp.i
+.PHONY : src/Window.cpp.i
+
+src/Window.s: src/Window.cpp.s
+
+.PHONY : src/Window.s
+
+# target to generate assembly for a file
+src/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Window.cpp.s
+.PHONY : src/Window.cpp.s
+
+src/X/XApp.o: src/X/XApp.cpp.o
+
+.PHONY : src/X/XApp.o
+
+# target to build an object file
+src/X/XApp.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XApp.cpp.o
+.PHONY : src/X/XApp.cpp.o
+
+src/X/XApp.i: src/X/XApp.cpp.i
+
+.PHONY : src/X/XApp.i
+
+# target to preprocess a source file
+src/X/XApp.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XApp.cpp.i
+.PHONY : src/X/XApp.cpp.i
+
+src/X/XApp.s: src/X/XApp.cpp.s
+
+.PHONY : src/X/XApp.s
+
+# target to generate assembly for a file
+src/X/XApp.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XApp.cpp.s
+.PHONY : src/X/XApp.cpp.s
+
+src/X/XDisplay.o: src/X/XDisplay.cpp.o
+
+.PHONY : src/X/XDisplay.o
+
+# target to build an object file
+src/X/XDisplay.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XDisplay.cpp.o
+.PHONY : src/X/XDisplay.cpp.o
+
+src/X/XDisplay.i: src/X/XDisplay.cpp.i
+
+.PHONY : src/X/XDisplay.i
+
+# target to preprocess a source file
+src/X/XDisplay.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XDisplay.cpp.i
+.PHONY : src/X/XDisplay.cpp.i
+
+src/X/XDisplay.s: src/X/XDisplay.cpp.s
+
+.PHONY : src/X/XDisplay.s
+
+# target to generate assembly for a file
+src/X/XDisplay.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XDisplay.cpp.s
+.PHONY : src/X/XDisplay.cpp.s
+
+src/X/XWindow.o: src/X/XWindow.cpp.o
+
+.PHONY : src/X/XWindow.o
+
+# target to build an object file
+src/X/XWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XWindow.cpp.o
+.PHONY : src/X/XWindow.cpp.o
+
+src/X/XWindow.i: src/X/XWindow.cpp.i
+
+.PHONY : src/X/XWindow.i
+
+# target to preprocess a source file
+src/X/XWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XWindow.cpp.i
+.PHONY : src/X/XWindow.cpp.i
+
+src/X/XWindow.s: src/X/XWindow.cpp.s
+
+.PHONY : src/X/XWindow.s
+
+# target to generate assembly for a file
+src/X/XWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XWindow.cpp.s
+.PHONY : src/X/XWindow.cpp.s
 
 src/test.o: src/test.cpp.o
 
@@ -186,9 +321,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... teste"
-	@echo "... src/X/Xapp.o"
-	@echo "... src/X/Xapp.i"
-	@echo "... src/X/Xapp.s"
+	@echo "... src/App.o"
+	@echo "... src/App.i"
+	@echo "... src/App.s"
+	@echo "... src/Display.o"
+	@echo "... src/Display.i"
+	@echo "... src/Display.s"
+	@echo "... src/Window.o"
+	@echo "... src/Window.i"
+	@echo "... src/Window.s"
+	@echo "... src/X/XApp.o"
+	@echo "... src/X/XApp.i"
+	@echo "... src/X/XApp.s"
+	@echo "... src/X/XDisplay.o"
+	@echo "... src/X/XDisplay.i"
+	@echo "... src/X/XDisplay.s"
+	@echo "... src/X/XWindow.o"
+	@echo "... src/X/XWindow.i"
+	@echo "... src/X/XWindow.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"

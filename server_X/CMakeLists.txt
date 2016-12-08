@@ -13,6 +13,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include_directories ("${PROJECT_SOURCE_DIR}/")
+
 FILE(
   GLOB_RECURSE
   file_prj
@@ -21,6 +22,7 @@ FILE(
 
 add_executable(teste ${file_prj})
 
-
+target_link_libraries(teste "X11")
+target_link_libraries(teste "SDL")
 
 
