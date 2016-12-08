@@ -57,33 +57,153 @@ include CMakeFiles/teste.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/teste.dir/flags.make
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.o: CMakeFiles/teste.dir/flags.make
-CMakeFiles/teste.dir/src/X/Xapp.cpp.o: src/X/Xapp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/teste.dir/src/X/Xapp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/X/Xapp.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/X/Xapp.cpp
+CMakeFiles/teste.dir/src/App.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/App.cpp.o: src/App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/teste.dir/src/App.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/App.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/App.cpp
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/X/Xapp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/X/Xapp.cpp > CMakeFiles/teste.dir/src/X/Xapp.cpp.i
+CMakeFiles/teste.dir/src/App.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/App.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/App.cpp > CMakeFiles/teste.dir/src/App.cpp.i
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/X/Xapp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/X/Xapp.cpp -o CMakeFiles/teste.dir/src/X/Xapp.cpp.s
+CMakeFiles/teste.dir/src/App.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/App.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/App.cpp -o CMakeFiles/teste.dir/src/App.cpp.s
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.o.requires:
+CMakeFiles/teste.dir/src/App.cpp.o.requires:
 
-.PHONY : CMakeFiles/teste.dir/src/X/Xapp.cpp.o.requires
+.PHONY : CMakeFiles/teste.dir/src/App.cpp.o.requires
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.o.provides: CMakeFiles/teste.dir/src/X/Xapp.cpp.o.requires
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/Xapp.cpp.o.provides.build
-.PHONY : CMakeFiles/teste.dir/src/X/Xapp.cpp.o.provides
+CMakeFiles/teste.dir/src/App.cpp.o.provides: CMakeFiles/teste.dir/src/App.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/App.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/App.cpp.o.provides
 
-CMakeFiles/teste.dir/src/X/Xapp.cpp.o.provides.build: CMakeFiles/teste.dir/src/X/Xapp.cpp.o
+CMakeFiles/teste.dir/src/App.cpp.o.provides.build: CMakeFiles/teste.dir/src/App.cpp.o
+
+
+CMakeFiles/teste.dir/src/Display.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/Display.cpp.o: src/Display.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/teste.dir/src/Display.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/Display.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/Display.cpp
+
+CMakeFiles/teste.dir/src/Display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/Display.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/Display.cpp > CMakeFiles/teste.dir/src/Display.cpp.i
+
+CMakeFiles/teste.dir/src/Display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/Display.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/Display.cpp -o CMakeFiles/teste.dir/src/Display.cpp.s
+
+CMakeFiles/teste.dir/src/Display.cpp.o.requires:
+
+.PHONY : CMakeFiles/teste.dir/src/Display.cpp.o.requires
+
+CMakeFiles/teste.dir/src/Display.cpp.o.provides: CMakeFiles/teste.dir/src/Display.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Display.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/Display.cpp.o.provides
+
+CMakeFiles/teste.dir/src/Display.cpp.o.provides.build: CMakeFiles/teste.dir/src/Display.cpp.o
+
+
+CMakeFiles/teste.dir/src/Window.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/Window.cpp.o: src/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/teste.dir/src/Window.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/Window.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/Window.cpp
+
+CMakeFiles/teste.dir/src/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/Window.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/Window.cpp > CMakeFiles/teste.dir/src/Window.cpp.i
+
+CMakeFiles/teste.dir/src/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/Window.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/Window.cpp -o CMakeFiles/teste.dir/src/Window.cpp.s
+
+CMakeFiles/teste.dir/src/Window.cpp.o.requires:
+
+.PHONY : CMakeFiles/teste.dir/src/Window.cpp.o.requires
+
+CMakeFiles/teste.dir/src/Window.cpp.o.provides: CMakeFiles/teste.dir/src/Window.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/Window.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/Window.cpp.o.provides
+
+CMakeFiles/teste.dir/src/Window.cpp.o.provides.build: CMakeFiles/teste.dir/src/Window.cpp.o
+
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/X/XApp.cpp.o: src/X/XApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/teste.dir/src/X/XApp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/X/XApp.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XApp.cpp
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/X/XApp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XApp.cpp > CMakeFiles/teste.dir/src/X/XApp.cpp.i
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/X/XApp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XApp.cpp -o CMakeFiles/teste.dir/src/X/XApp.cpp.s
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.o.requires:
+
+.PHONY : CMakeFiles/teste.dir/src/X/XApp.cpp.o.requires
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.o.provides: CMakeFiles/teste.dir/src/X/XApp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XApp.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/X/XApp.cpp.o.provides
+
+CMakeFiles/teste.dir/src/X/XApp.cpp.o.provides.build: CMakeFiles/teste.dir/src/X/XApp.cpp.o
+
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.o: src/X/XDisplay.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/teste.dir/src/X/XDisplay.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/X/XDisplay.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XDisplay.cpp
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/X/XDisplay.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XDisplay.cpp > CMakeFiles/teste.dir/src/X/XDisplay.cpp.i
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/X/XDisplay.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XDisplay.cpp -o CMakeFiles/teste.dir/src/X/XDisplay.cpp.s
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.requires:
+
+.PHONY : CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.requires
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.provides: CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.provides
+
+CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.provides.build: CMakeFiles/teste.dir/src/X/XDisplay.cpp.o
+
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.o: CMakeFiles/teste.dir/flags.make
+CMakeFiles/teste.dir/src/X/XWindow.cpp.o: src/X/XWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/teste.dir/src/X/XWindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/X/XWindow.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XWindow.cpp
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teste.dir/src/X/XWindow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XWindow.cpp > CMakeFiles/teste.dir/src/X/XWindow.cpp.i
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teste.dir/src/X/XWindow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruhtra/projets/E4-projet-gant/server_X/src/X/XWindow.cpp -o CMakeFiles/teste.dir/src/X/XWindow.cpp.s
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/teste.dir/src/X/XWindow.cpp.o.requires
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.o.provides: CMakeFiles/teste.dir/src/X/XWindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/X/XWindow.cpp.o.provides.build
+.PHONY : CMakeFiles/teste.dir/src/X/XWindow.cpp.o.provides
+
+CMakeFiles/teste.dir/src/X/XWindow.cpp.o.provides.build: CMakeFiles/teste.dir/src/X/XWindow.cpp.o
 
 
 CMakeFiles/teste.dir/src/test.cpp.o: CMakeFiles/teste.dir/flags.make
 CMakeFiles/teste.dir/src/test.cpp.o: src/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/teste.dir/src/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/teste.dir/src/test.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teste.dir/src/test.cpp.o -c /home/ruhtra/projets/E4-projet-gant/server_X/src/test.cpp
 
 CMakeFiles/teste.dir/src/test.cpp.i: cmake_force
@@ -107,17 +227,27 @@ CMakeFiles/teste.dir/src/test.cpp.o.provides.build: CMakeFiles/teste.dir/src/tes
 
 # Object files for target teste
 teste_OBJECTS = \
-"CMakeFiles/teste.dir/src/X/Xapp.cpp.o" \
+"CMakeFiles/teste.dir/src/App.cpp.o" \
+"CMakeFiles/teste.dir/src/Display.cpp.o" \
+"CMakeFiles/teste.dir/src/Window.cpp.o" \
+"CMakeFiles/teste.dir/src/X/XApp.cpp.o" \
+"CMakeFiles/teste.dir/src/X/XDisplay.cpp.o" \
+"CMakeFiles/teste.dir/src/X/XWindow.cpp.o" \
 "CMakeFiles/teste.dir/src/test.cpp.o"
 
 # External object files for target teste
 teste_EXTERNAL_OBJECTS =
 
-bin/teste: CMakeFiles/teste.dir/src/X/Xapp.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/App.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/Display.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/Window.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/X/XApp.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/X/XDisplay.cpp.o
+bin/teste: CMakeFiles/teste.dir/src/X/XWindow.cpp.o
 bin/teste: CMakeFiles/teste.dir/src/test.cpp.o
 bin/teste: CMakeFiles/teste.dir/build.make
 bin/teste: CMakeFiles/teste.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/teste"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/teste"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teste.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,7 +255,12 @@ CMakeFiles/teste.dir/build: bin/teste
 
 .PHONY : CMakeFiles/teste.dir/build
 
-CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/X/Xapp.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/App.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/Display.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/Window.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/X/XApp.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/X/XDisplay.cpp.o.requires
+CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/X/XWindow.cpp.o.requires
 CMakeFiles/teste.dir/requires: CMakeFiles/teste.dir/src/test.cpp.o.requires
 
 .PHONY : CMakeFiles/teste.dir/requires
