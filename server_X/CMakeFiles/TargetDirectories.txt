@@ -1,3 +1,0 @@
-/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles/rebuild_cache.dir
-/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles/edit_cache.dir
-/home/ruhtra/projets/E4-projet-gant/server_X/CMakeFiles/teste.dir

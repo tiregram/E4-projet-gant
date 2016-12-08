@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -g   CMakeFiles/teste.dir/src/App.cpp.o CMakeFiles/teste.dir/src/Display.cpp.o CMakeFiles/teste.dir/src/Window.cpp.o CMakeFiles/teste.dir/src/X/XApp.cpp.o CMakeFiles/teste.dir/src/X/XDisplay.cpp.o CMakeFiles/teste.dir/src/X/XWindow.cpp.o CMakeFiles/teste.dir/src/test.cpp.o  -o bin/teste -rdynamic -lX11 -lSDL 

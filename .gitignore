@@ -28,8 +28,13 @@
 *.out
 *.app
 
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-bin/*
+server_X/CMakeCache.txt
+server_X/CMakeFiles
+server_X/Makefile
+server_X/cmake_install.cmake
+server_X/bin/
+
+arduino/C++/Makefile
+arduino/C++/CMakeFiles
+arduino/C++/bin/
+arduino/C++/CMakeCache.txt
