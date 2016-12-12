@@ -23,8 +23,9 @@ set( nano.bootloader.low_fuses 0xFF)
 set( nano.bootloader.high_fuses 0xDE)
 set( nano.bootloader.extended_fuses 0x05)
 set( nano.bootloader.file optiboot/optiboot_atmega328.hex)
-set (CMAKE_CXX_STANDARD 11)
 
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 #set(ARDUINO_PLATFORMS avr)
 
 project(Gant C CXX)
