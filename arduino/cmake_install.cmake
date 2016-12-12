@@ -1,4 +1,4 @@
-# Install script for directory: /home/ruhtra/arduinomake
+# Install script for directory: /home/ruhtra/projets/E4-projet-gant/arduino
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ruhtra/arduinomake/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ruhtra/projets/E4-projet-gant/arduino/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -25,7 +25,7 @@ set( nano.bootloader.extended_fuses 0x05)
 set( nano.bootloader.file optiboot/optiboot_atmega328.hex)
 
 set (CMAKE_CXX_STANDARD 11)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 #set(ARDUINO_PLATFORMS avr)
 
 project(Gant C CXX)
@@ -38,7 +38,6 @@ message("________")
 
 include_directories(lib/avr-stl/include/)
 
-link_directories(${ARDUINO_SDK_d}/libraries)
 link_directories(${ARDUINO_SDK}/libraries)
 link_directories(${ARDUINO_SDK_d}/hardware/arduino/avr/cores/arduino/)
 

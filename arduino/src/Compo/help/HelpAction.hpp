@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Action.hpp"
+#include "../BaseAction.hpp"
 
 class HelpAction : public BaseAction
 {

@@ -1,5 +1,5 @@
 #include "HelpCompo.hpp"
-#include "help/HelpAction.hpp"
+#include "HelpAction.hpp"
 
 HelpCompo::HelpCompo()
   :BaseCompo("Help")

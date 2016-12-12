@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../nice.inc"
-#include "Action.hpp"
+#include "BaseAction.hpp"
 
 class BaseAction;
 
