@@ -1,14 +1,11 @@
 #pragma once
 
-#include "BaseCompo.hpp"
+#include "../BaseCompo.hpp"
 
-class HelpCompo : public BaseCompo
+class PinCompo : public BaseCompo
 {
 public:
-  HelpCompo();
+  PinCompo();
   void  getCommand(std::map<std::string,BaseAction*>& cmds) override;
-  ~HelpCompo();
+  ~PinCompo();
 };
-
-
-

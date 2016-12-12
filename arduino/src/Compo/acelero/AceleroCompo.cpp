@@ -1,9 +1,8 @@
 
 
 #include "AceleroCompo.hpp"
-#include "Ace_getAction.hpp"
+#include "AceleroAction.hpp"
 
-#include "I2Cdev.h"
 #include "MPU6050.h"
 
 #include <map>
@@ -11,7 +10,6 @@
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "Wire.h"
 #endif
-
 
 
 AceleroCompo::AceleroCompo():BaseCompo("acelero") {

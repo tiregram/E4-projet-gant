@@ -5,13 +5,34 @@
 #include <HardwareSerial.h>
 
 #include "Compo/BaseCompo.hpp"
-#include "Compo/HelpCompo.hpp"
-#include "Compo/Action.hpp"
+#include "Compo/BaseAction.hpp"
+
 #include "Compo/acelero/AceleroCompo.hpp"
+#include "Compo/pin/PinCompo.hpp"
+#include "Compo/help/HelpCompo.hpp"
+#include "Compo/pin/PinInitAction.hpp"
 
 //#define DEBUG
 
 std::map<std::string,BaseAction*> t;
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <iterator>
+
+std::vector<std::string> getWordList(std::string str )
+{
+  std::istringstream buf(str);
+  std::istream_iterator<std::string> beg(buf), end;
+
+  std::vector<std::string> tokens(beg, end);
+
+  return tokens;
+
+}
 
 void setup() {
 
@@ -23,6 +44,9 @@ void setup() {
 
   HelpCompo* hc = new HelpCompo();
   hc->getCommand(t);
+
+  PinCompo* pc = new PinCompo();
+  pc->getCommand(t);
 
 
   AceleroCompo* ac = new AceleroCompo();
