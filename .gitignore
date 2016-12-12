@@ -27,6 +27,7 @@
 *.exe
 *.out
 *.app
+.#*
 
 server_X/CMakeCache.txt
 server_X/CMakeFiles
@@ -34,7 +35,9 @@ server_X/Makefile
 server_X/cmake_install.cmake
 server_X/bin/
 
-arduino/C++/Makefile
-arduino/C++/CMakeFiles
-arduino/C++/bin/
-arduino/C++/CMakeCache.txt
+arduino/Makefile
+arduino/CMakeFiles
+arduino/bin/
+arduino/CMakeCache.txt
+arduino/cmake_install.cmake
+
