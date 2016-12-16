@@ -9,12 +9,10 @@ class BaseCompo;
 class BaseAction
 {
 
-
-
 public:
   BaseCompo* comp;
   BaseAction(BaseCompo* comp);
-  virtual std::string Do(const std::string&) =0;
+  virtual bool Do(const std::string&in) =0;
   virtual ~BaseAction();
 };
 
