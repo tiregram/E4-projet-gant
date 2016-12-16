@@ -20,6 +20,11 @@ public:
 
   BaseCompo(std::string name);
 
+  virtual std::string getHelp(std::string str)
+  {
+    return "Help Is Undefined";
+  }
+
   virtual void  getCommand(std::map<std::string,BaseAction*>& cmds)=0;
   virtual ~BaseCompo();
 };

@@ -1,7 +1,7 @@
 
 #include "../BaseAction.hpp"
 #include "HelpAction.hpp"
-
+#include <Arduino.h>
 HelpAction::HelpAction(BaseCompo* comp):BaseAction(comp)
 {
 
@@ -12,8 +12,9 @@ HelpAction::~HelpAction()
 
 }
 
-std::string HelpAction::Do(const std::string& a)
+bool HelpAction::Do(const std::string& in )
 {
-  std::string b = "lapin";
-  return b;
+  Serial.print("NO HELP TODO");
+
+  return true;
 }
