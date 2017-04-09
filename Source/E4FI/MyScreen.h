@@ -29,8 +29,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MyScreen")
 		void SetActive(bool NewMyScreenState);
 
+	UFUNCTION(BlueprintCallable, Category = "MyScreen")
+		void MoveHorizontally();
+
+	UFUNCTION(BlueprintCallable, Category = "MyScreen")
+		void SetLocationOnCylinder();
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = AugmentedReality)
 		UStaticMeshComponent* VideoSurfaceMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = AugmentedReality)
+		FVector test;
 
 
 protected:
@@ -50,7 +58,12 @@ protected:
 
 	UMaterialInstanceDynamic *VideoMaterial;
 
-	int i;
+	int i;// used for debug 
+
+	int m_width, m_height;
+
+	FORCEINLINE int getWidth() const { return m_width; }
+	FORCEINLINE int getHeight() const { return m_height; }
 
 	void GetFrameImage(uint8* DestinationImageBuffer);
 
@@ -58,7 +71,13 @@ protected:
 
 	void InitVideoMaterialTexture();
 
+	void InitWidthHeight(int w, int h);
+
 	void EndPlay(const EEndPlayReason::Type EndPlayReason);
 
 
 };
+
+
+//TODO
+//Try to have a fixed ratio between the image input and the scale of the plane

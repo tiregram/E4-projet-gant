@@ -11,6 +11,11 @@
 // Sets default values
 AMyScreen::AMyScreen(const class FObjectInitializer &PCIP) : Super(PCIP)
 {
+	// added
+	m_width = 50;
+	m_height = 50;
+
+
 	VideoSurfaceMesh = PCIP.CreateDefaultSubobject<UStaticMeshComponent>(this, TEXT("VideoSurfaceMesh"));
 	RootComponent = VideoSurfaceMesh;
 
@@ -28,6 +33,14 @@ AMyScreen::AMyScreen(const class FObjectInitializer &PCIP) : Super(PCIP)
 	UE_LOG(LogTemp, Warning, TEXT("Constructor called"));
 	
 	i = std::rand()%100 + 1;
+	
+}
+
+void AMyScreen::InitWidthHeight(int w, int h)
+{
+
+	m_width = w;
+	m_height = h;
 
 }
 
@@ -39,8 +52,15 @@ void AMyScreen::BeginPlay()
 	Super::BeginPlay();
 	Log();
 
-	VideoFrameData.Init(FColor::MakeRandomColor(), 100*100); // VideoFrameData.Init(FColor::MakeRandomColor(), VideoSource->GetVideoWidth() * VideoSource->GetVideoHeight());
+	UE_LOG(LogTemp, Warning, TEXT("Test Vector"));
+	
+	//VideoFrameData.Init(FColor::MakeRandomColor(), 100*100); 
+	VideoFrameData.Init(FColor::MakeRandomColor(), getWidth()*getHeight());
+
+	
+
 	InitVideoMaterialTexture();
+	SetLocationOnCylinder();
 }
 
 // Called every frame
@@ -49,12 +69,47 @@ void AMyScreen::Tick( float DeltaTime )
 	//Super::Tick( DeltaTime );
 	UpdateVideoFrame();
 
+	SetActorLocation(GetActorLocation()+ FVector(0.0,0.0,sinf(UGameplayStatics::GetRealTimeSeconds(GetWorld())+i)*0.2));
+	//SetActorRotation(GetActorRotation() + FRotator(sinf(UGameplayStatics::GetRealTimeSeconds(GetWorld()))*3.14/2,0,0));
+	
+	//if (IsInputKeyDown(EKeys::A))
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("A Pressed"));
+	//	MoveHorizontally();
+
+	//}
+
+
 }
 
 void AMyScreen::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	//VideoSource->Close();
 	UE_LOG(LogTemp, Warning, TEXT("End of MyScreen"));
+}
+
+void AMyScreen::MoveHorizontally()
+{
+
+	SetActorLocation(GetActorLocation() + FVector(1.0, 0.0, 0.0));
+}
+
+void AMyScreen::SetLocationOnCylinder()
+{
+
+	int hauteurMax = 200;
+	int hauteur = FMath::RandRange(0, hauteurMax);
+	float angle = FMath::RandRange(0.0f, 3.14f);
+	FVector BasePoint = FVector(0,0,100);
+	float radius = 400;
+
+	FVector newPosition = BasePoint + FVector(radius * FMath::Sin(angle), radius * FMath::Cos(angle),hauteur);
+	
+	UE_LOG(LogTemp, Warning, TEXT("Setting new Pos"));
+	SetActorLocation(newPosition);
+	//SetActorRotation(FVector(90.0f,0.0f,-90.0f*FMath::Cos(angle)));
+
+	SetActorRotation(FRotator(90, 0, -90 * FMath::Cos(angle)));
 }
 
 
@@ -85,8 +140,8 @@ void AMyScreen::UpdateVideoFrame()
 	//VideoSource->GetFrameImage(DestinationImageBuffer);
 	GetFrameImage(DestinationImageBuffer);
 
-	//UpdateTextureRegions(VideoTexture, (int32)0, (uint32)1, VideoTextureRegion, (uint32)(4 * VideoSource->GetVideoWidth()), (uint32)4, DestinationImageBuffer, false);
-	UpdateTextureRegions(VideoTexture, (int32)0, (uint32)1, VideoTextureRegion, (uint32)(4 * 100), (uint32)4, DestinationImageBuffer, false);
+	UpdateTextureRegions(VideoTexture, (int32)0, (uint32)1, VideoTextureRegion, (uint32)(4 * getWidth()), (uint32)4, DestinationImageBuffer, false);
+	//UpdateTextureRegions(VideoTexture, (int32)0, (uint32)1, VideoTextureRegion, (uint32)(4 * 100), (uint32)4, DestinationImageBuffer, false);
 
 }
 
@@ -187,11 +242,13 @@ void AMyScreen::InitVideoMaterialTexture()
 				}
 				VideoMaterial = DynamicMaterialInstance;
 				// now that we have dynamic video material, create transient texture to draw video to, and set the material VideoTexture parameter
-				VideoTexture = UTexture2D::CreateTransient(100, 100); // Pour l'instannt 100*100, à l'avenir ->  VideoTexture = UTexture2D::CreateTransient(VideoSource->GetVideoWidth(), VideoSource->GetVideoHeight());
+				//VideoTexture = UTexture2D::CreateTransient(100, 100); // Pour l'instannt 100*100, à l'avenir -> 
+				VideoTexture = UTexture2D::CreateTransient(getWidth(), getHeight());
 				VideoTexture->UpdateResource();
 				VideoMaterial->SetTextureParameterValue(FName("VideoTexture"), VideoTexture);
-				VideoTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, 100, 100); 
-				//to change with  VideoTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, VideoSource->GetVideoWidth(), VideoSource->GetVideoHeight()); 
+				//VideoTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, 100, 100); 
+				//to change with  
+				VideoTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, getWidth(), getHeight()); 
 				break;
 			}
 
@@ -206,8 +263,8 @@ void AMyScreen::GetFrameImage(uint8* DestinationImageBuffer)
 	//UE_LOG(LogTemp, Warning, TEXT("Getting Frame Image"));
 
 
-	uint16 Width = 100;
-	uint16 Height = 100;
+	int Width = getWidth();
+	int Height = getHeight();
 	uint8* DestinationPointer = NULL;
 	uint8* SourcePointer = NULL;
 
@@ -217,11 +274,11 @@ void AMyScreen::GetFrameImage(uint8* DestinationImageBuffer)
 	if (true) {
 
 		DestinationPointer = DestinationImageBuffer;
-		for (int32 y = 0; y < 100; y++)
+		for (int32 x = 0; x < Width; x++)
 		{
-			for (int32 x = 0; x < 100; x++)
+			for (int32 y = 0; y < Height; y++)
 			{
-				if (x < i)
+				if (x < Width/2 && y < Height)
 				{
 					*DestinationPointer++ = 0;
 					*DestinationPointer++ = 0;
@@ -243,6 +300,6 @@ void AMyScreen::GetFrameImage(uint8* DestinationImageBuffer)
 		}
 
 	}
-	i=(i+1)%100;
+	//i=(i+1)%100;
 	
 	}
