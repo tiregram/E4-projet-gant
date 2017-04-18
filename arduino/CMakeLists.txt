@@ -49,6 +49,7 @@ FILE(
 
 generate_arduino_firmware(Gant
   SRCS  ${srcGANT}
+ # PORT /dev/rfcomm0
   PORT /dev/ttyUSB0
   BOARD nano)
 

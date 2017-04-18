@@ -9,7 +9,7 @@ namespace G{
   
   }
   G::Window* App::getWindow(std::string nameOfWindow) const {
-    G::Window b;
+
 
     return NULL;
   }

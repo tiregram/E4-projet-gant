@@ -14,6 +14,7 @@ namespace Xlib {
 }
 
 
+
 typedef struct {
   Uint8 i;
   Uint8 r;
@@ -36,7 +37,7 @@ namespace G {
   public:
     XDisplay(std::string& pname, std::string& paddr);
     virtual ~XDisplay();
-    void draw(SDL_Surface *surface,int id);
+    //    void draw(SDL_Surface *surface,int id);
   };
 }
 
