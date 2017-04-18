@@ -6,7 +6,7 @@
 namespace G {
   class XApp : public App
   {
-    
+
   public:
     XApp(std::string name);
     virtual ~XApp();

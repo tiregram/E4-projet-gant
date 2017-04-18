@@ -15,7 +15,6 @@ namespace G {
   }
 
   G::Window* XApp::getWindow(std::string nameOfWindow) const {
-    G::Window b;
 
     return NULL;
   }

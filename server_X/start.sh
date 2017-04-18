@@ -8,8 +8,9 @@ then
 fi
 
 Xvfb :8 &
-sleep 2 
+sleep 2
 DISPLAY=":8" cacafire &
+DISPLAY=":8" cacademo &
 DISPLAY=":8" xterm &
 
 
