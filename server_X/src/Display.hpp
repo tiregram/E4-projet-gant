@@ -3,7 +3,8 @@
 
 #include <map>
 #include <string>
-
+#include <vector>
+#include <memory>
 #include "App.hpp"
 
 namespace G {
@@ -13,16 +14,13 @@ namespace G {
   {
   private:
     std::string name;
-    std::map<std::string,G::App*> listApp;
-
 
   public:
     Display(std::string& name);
     virtual ~Display();
 
-    void add_app(G::App& a);
-    void add_exist(G::App& a);
-
+    virtual
+    std::vector<std::shared_ptr<G::Window>> get_windows_list()=0;
   };
 
 

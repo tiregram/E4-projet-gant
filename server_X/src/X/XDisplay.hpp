@@ -3,6 +3,8 @@
 
 #include "../Display.hpp"
 
+#include <string>
+
 extern "C" {
 #include <SDL/SDL.h>
 }
@@ -33,12 +35,18 @@ namespace G {
     Mycolor* col;
     Xlib::Colormap cmap;
 
-    Xlib::Display* xdisplay_natif;
+
+
   public:
+    Xlib::Display* xdisplay_natif;
     XDisplay(std::string& pname, std::string& paddr);
     virtual ~XDisplay();
-    //    void draw(SDL_Surface *surface,int id);
+
+
+    std::vector<std::shared_ptr<G::Window>> get_windows_list()    override;
+
   };
+
 }
 
 

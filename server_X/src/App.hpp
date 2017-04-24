@@ -10,7 +10,6 @@ namespace G {
   class App
   {
   private:
-    std::vector<G::Window*> listWindows;
 
   public:
     App(std::string name);
