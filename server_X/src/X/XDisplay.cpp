@@ -4,11 +4,13 @@ extern "C" {
 }
 
 #include <exception>
-	
+#include <memory.h>
+
 namespace Xlib {
   extern "C" {
 #include <X11/X.h>
 #include <X11/Xutil.h>
+#include <X11/Xatom.h>
   }
 }
 
@@ -19,6 +21,8 @@ using namespace Xlib;
 #include <bitset>
 #include <iostream>
 #include <cstdlib>
+#include <string>
+#include <memory>
 
 #include "../Display.hpp"
 #include "XApp.hpp"
@@ -43,10 +47,6 @@ namespace G {
         std::cerr <<"Impossible d'ouvrir le Display"  << "\n";
         throw  std::runtime_error( "Erreur: Pas de display avec " + pname + " et addr :" + paddr);
       }
-
-    for (int i = 0; i < 5; i++) {
-      
-    }
 
     ///////////////////////////////////////////////////////////////////////////
     //                      recuperation of the windows root                 //
@@ -82,22 +82,89 @@ namespace G {
         {
             // get window Id:
           Xlib::Window w = (Xlib::Window) array[k];
+          auto xw = std::make_shared<G::XWindow>(this,w);
 
-          std::cout << "window: " << w  << "\n";
+          /////////////////////////////////////////////////////////////////////
+          //                               test                              //
+          /////////////////////////////////////////////////////////////////////
+          Atom prop_desktop, prop_type, prop, da;
+          char *an;
+          int di;
+          int status;
+          unsigned char *prop_ret = NULL;
+          unsigned long dl,dl2;
+
+          prop_type = Xlib::XInternAtom(this->xdisplay_natif, "_NET_WM_PID", True);
+
+          status = Xlib::XGetWindowProperty(this->xdisplay_natif, w, prop_type, 0L, sizeof (Atom), False,
+                                      XA_CARDINAL, &da, &di, &dl, &dl2, &prop_ret);
+
+          if (status == Success && prop_ret )
+            {
+              std::cout << "status:" << status
+                        << ", " << da
+                        << ", " << di
+                        << ", " << dl
+                        << ", " << dl2
+                        << ", " << *((long*)prop_ret)
+                        << "\n";
+            }
+
         }
+
       Xlib::XFree(data);
     }
     else{
       std::cout <<"no o lapin"  << "\n";
-
     }
+  }
+
+  std::vector<std::shared_ptr<G::Window>> XDisplay::get_windows_list()
+  {
+    std::vector<std::shared_ptr<G::Window>> ret_list;
+
+    Atom a = XInternAtom(this->xdisplay_natif, "_NET_CLIENT_LIST" , true);
+    Xlib::Window root = RootWindow(this->xdisplay_natif, DefaultScreen(this->xdisplay_natif));
+    Atom actualType;
+    int format;
+    unsigned long numItems, bytesAfter;
+    unsigned char *data =0;
+
+    int status = XGetWindowProperty(this->xdisplay_natif,
+                                    root,
+                                    a,
+                                    0L,
+                                    (~0L),
+                                    false,
+                                    AnyPropertyType,
+                                    &actualType,
+                                    &format,
+                                    &numItems,
+                                    &bytesAfter,
+                                    &data);
+
+    if (status >= Success && numItems)
+    {
+      unsigned long* array = (unsigned long*) data;
+
+      for (unsigned int k = 0; k < numItems; k++)
+        {
+          Xlib::Window w = (Xlib::Window) array[k];
+          auto xw = std::make_shared<G::XWindow>(this,w);
+          ret_list.push_back(xw);
+        }
+    }
+    else{
+      std::cout <<"no win"  << "\n";
+    }
+
+    return ret_list;
   }
 
   XDisplay::~XDisplay()
   {
     Xlib::XCloseDisplay(this->xdisplay_natif);
   }
-
 
 }
 
