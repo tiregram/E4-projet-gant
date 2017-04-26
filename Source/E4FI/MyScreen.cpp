@@ -11,6 +11,8 @@
 // Sets default values
 AMyScreen::AMyScreen(const class FObjectInitializer &PCIP) : Super(PCIP)
 {
+
+	
 	// added
 	m_width = 50;
 	m_height = 50;
@@ -47,6 +49,10 @@ void AMyScreen::InitWidthHeight(int w, int h)
 // Called when the game starts or when spawned
 void AMyScreen::BeginPlay()
 {
+	//EnableInput();
+	//EnableInput(GetWorld()->GetAuthGameMode()->DefaultPawnClass.GetDefaultObject);
+	
+
 	UE_LOG(LogTemp, Warning, TEXT("Log LOG"));
 
 	Super::BeginPlay();
@@ -61,6 +67,10 @@ void AMyScreen::BeginPlay()
 
 	InitVideoMaterialTexture();
 	SetLocationOnCylinder();
+
+	//InputComponent->BindAction("test", IE_Pressed, this, &AMyScreen::MoveHorizontally);
+	//MoveHorizontally();
+
 }
 
 // Called every frame
@@ -70,14 +80,7 @@ void AMyScreen::Tick( float DeltaTime )
 	UpdateVideoFrame();
 
 	SetActorLocation(GetActorLocation()+ FVector(0.0,0.0,sinf(UGameplayStatics::GetRealTimeSeconds(GetWorld())+i)*0.2));
-	//SetActorRotation(GetActorRotation() + FRotator(sinf(UGameplayStatics::GetRealTimeSeconds(GetWorld()))*3.14/2,0,0));
-	
-	//if (IsInputKeyDown(EKeys::A))
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("A Pressed"));
-	//	MoveHorizontally();
 
-	//}
 
 
 }
@@ -90,8 +93,19 @@ void AMyScreen::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 void AMyScreen::MoveHorizontally()
 {
+	UE_LOG(LogTemp, Warning, TEXT("MoveMove"));
+	//if (GetName() == "MyMyScreen7")	return;
 
-	SetActorLocation(GetActorLocation() + FVector(1.0, 0.0, 0.0));
+
+	SetActorScale3D(GetActorScale3D() + FVector(1.08, 1.92, 0.0));
+	UE_LOG(LogTemp, Warning, TEXT("Successful Input Mapping"));
+}
+
+void AMyScreen::ScaleY(float value)
+{
+
+	SetActorScale3D(GetActorScale3D() + FVector(0.0, value, 0.0));
+
 }
 
 void AMyScreen::SetLocationOnCylinder()
@@ -132,6 +146,19 @@ void AMyScreen::SetActive(bool NewMyScreenState)
 	isActive = NewMyScreenState;
 }
 
+void AMyScreen::ResizeUp()
+{
+	SetActorScale3D(GetActorScale3D() + FVector(1.08, 1.92, 0.0));
+	UE_LOG(LogTemp, Warning, TEXT("Successful Resize Up"));
+}
+
+void AMyScreen::ResizeDown()
+{
+	SetActorScale3D(GetActorScale3D() - FVector(1.08, 1.92, 0.0));
+	UE_LOG(LogTemp, Warning, TEXT("Successful Resize Down"));
+}
+
+
 
 void AMyScreen::UpdateVideoFrame()
 {
@@ -171,7 +198,7 @@ void AMyScreen::UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32
 		RegionData->SrcPitch = SrcPitch;
 		RegionData->SrcBpp = SrcBpp;
 		RegionData->SrcData = SrcData;
-		UE_LOG(LogTemp, Warning, TEXT("We Came this far"));
+		//UE_LOG(LogTemp, Warning, TEXT("We Came this far"));
 		ENQUEUE_UNIQUE_RENDER_COMMAND_TWOPARAMETER(
 			UpdateTextureRegionsData,
 			FUpdateTextureRegionsData*, RegionData, RegionData,
@@ -202,7 +229,7 @@ void AMyScreen::UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32
 
 			});
 
-		UE_LOG(LogTemp, Warning, TEXT("And this far"));
+		//UE_LOG(LogTemp, Warning, TEXT("And this far"));
 
 	}
 
