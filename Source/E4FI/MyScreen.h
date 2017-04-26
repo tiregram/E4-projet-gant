@@ -33,6 +33,15 @@ public:
 		void MoveHorizontally();
 
 	UFUNCTION(BlueprintCallable, Category = "MyScreen")
+		void ResizeUp();
+
+	UFUNCTION(BlueprintCallable, Category = "MyScreen")
+		void ResizeDown();
+
+	UFUNCTION(BlueprintCallable, Category = "MyScreen")
+		void ScaleY(float value);
+
+	UFUNCTION(BlueprintCallable, Category = "MyScreen")
 		void SetLocationOnCylinder();
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = AugmentedReality)
 		UStaticMeshComponent* VideoSurfaceMesh;
