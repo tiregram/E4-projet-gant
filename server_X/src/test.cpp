@@ -23,13 +23,12 @@ int main(int argc, char *argv[])
       std::cout << *a << "\n"
                 <<"try to change size... \n";
 
-      G::Geometry& g = a->get_geo();
-      std::cout << g  << "\n";
-      g.set_width(100);
-      g.set_height(100);
-      g.apply();
 
-      std::cout << a->get_geo() << "\n";
+      // G::Geometry& g = a->get_geo_manager();
+      // g.set_width(100);
+      // g.set_height(100);
+      // g.apply();
+
     }
 
   }
