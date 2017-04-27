@@ -29,6 +29,10 @@
 *.app
 .#*
 
+# Bin  
+*.bin
+*/bin/*
+
 server_X/CMakeCache.txt
 server_X/CMakeFiles
 server_X/Makefile
