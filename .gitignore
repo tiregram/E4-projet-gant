@@ -33,15 +33,12 @@
 *.bin
 */bin/*
 
-server_X/CMakeCache.txt
-server_X/CMakeFiles
-server_X/Makefile
-server_X/cmake_install.cmake
-server_X/bin/
 
-arduino/Makefile
-arduino/CMakeFiles
-arduino/bin/
-arduino/CMakeCache.txt
-arduino/cmake_install.cmake
+# cmake
+*/CMakeCache.txt
+*/CMakeFiles
+*/CMakeFiles/*
+*/Makefile
+*/cmake_install.cmake
+
 
