@@ -5,18 +5,9 @@
 
 namespace G {
 
-  XApp::XApp(std::string name):App(name)
-  {
+	XApp::XApp(std::string name) : App(name) {}
 
-  }
+	XApp::~XApp() {}
 
-  XApp::~XApp() {
-
-  }
-
-  G::Window* XApp::getWindow(std::string nameOfWindow) const {
-
-    return NULL;
-  }
-
+	G::Window* XApp::getWindow(std::string nameOfWindow) const { return NULL; }
 }
