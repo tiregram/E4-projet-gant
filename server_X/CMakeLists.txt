@@ -2,6 +2,8 @@
 cmake_minimum_required (VERSION 2.6)
 project (POO)
 find_package(SDL REQUIRED)
+find_package(LibSSH REQUIRED)
+
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
 set (PROJECT_SOURCE_DIR src)
@@ -14,6 +16,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include_directories ("${PROJECT_SOURCE_DIR}/")
 include_directories (${SDL_INCLUDE_DIR})
+include_directories (${LIBSSH_INCLUDE_DIRS})
+
 
 FILE(
   GLOB_RECURSE
@@ -25,5 +29,4 @@ add_executable(test.bin ${file_prj})
 
 target_link_libraries(test.bin "X11")
 target_link_libraries(test.bin ${SDL_LIBRARY})
-
-
+target_link_libraries(test.bin ${LIBSSH_LIBRARIES})
