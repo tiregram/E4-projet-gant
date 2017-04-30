@@ -1,9 +1,0 @@
-{
-	"Changelist" : 3299760,
-	"BuildId" : "52fabef5-4d58-4403-b661-b3dd53a9e895",
-	"Modules" : 
-	{
-		"SubstanceCore" : "UE4Editor-SubstanceCore.dll",
-		"SubstanceEditor" : "UE4Editor-SubstanceEditor.dll"
-	}
-}
