@@ -1,0 +1,3 @@
+/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4.Build.cs
+/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4.Target.cs
+/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4Editor.Target.cs

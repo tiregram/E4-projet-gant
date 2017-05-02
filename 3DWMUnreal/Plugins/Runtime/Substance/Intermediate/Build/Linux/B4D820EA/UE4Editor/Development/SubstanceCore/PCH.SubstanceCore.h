@@ -1,4 +1,4 @@
-// PCH for /home/stephen/Documents/UnrealProjects/E4-projet-gant 4.15/Plugins/Runtime/Substance/Source/SubstanceCore/Private/SubstanceCorePrivatePCH.h
+// PCH for /home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Plugins/Runtime/Substance/Source/SubstanceCore/Private/SubstanceCorePrivatePCH.h
 #define UE_EDITOR 1
 #define IS_PROGRAM 0
 #define WITH_DEV_AUTOMATION_TESTS 1
@@ -133,4 +133,4 @@
 #define TARGETPLATFORM_API DLLIMPORT
 #define DESKTOPPLATFORM_API DLLIMPORT
 #define MAINFRAME_API DLLIMPORT
-#include "/home/stephen/Documents/UnrealProjects/E4-projet-gant 4.15/Plugins/Runtime/Substance/Source/SubstanceCore/Private/SubstanceCorePrivatePCH.h"
+#include "/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Plugins/Runtime/Substance/Source/SubstanceCore/Private/SubstanceCorePrivatePCH.h"

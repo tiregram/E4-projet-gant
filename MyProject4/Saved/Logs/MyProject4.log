@@ -1,0 +1,637 @@
+﻿Log file open, 05/02/17 11:31:59
+LogInit:Display: Running engine for game: MyProject4
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(1045450888) SRandInit(1045450889).
+LogTaskGraph: Started task graph with 5 named threads and 8 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.032311
+LogInit: Using libcurl 7.48.0-DEV
+LogInit:  - built for x86_64-unknown-linux-gnu
+LogInit:  - supports SSL with OpenSSL/1.0.2h
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_TLSAUTH_SRP
+LogInit:  Libcurl: checking if '/etc/pki/tls/certs/ca-bundle.crt' exists
+LogInit:  Libcurl: checking if '/etc/ssl/certs/ca-certificates.crt' exists
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = /etc/ssl/certs/ca-certificates.crt  - Libcurl will set CURLOPT_CAINFO to it
+LogInit: Build: ++UE4+Release-4.15-CL-0
+LogInit: Engine Version: 4.15.1-0+++UE4+Release-4.15
+LogInit: Compatible Engine Version: 4.15.0-0+++UE4+Release-4.15
+LogInit: Net CL: 0
+LogDevObjectVersion: Number of dev versions registered: 14
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 8
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 14
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 22
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 12
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 3
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogInit: Compiled (64-bit): Apr 27 2017 16:37:00
+LogInit: Compiled with Clang: 3.5.2 (tags/RELEASE_352/final)
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.15
+LogInit: Command line: 
+LogInit: Base directory: /home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux/
+LogInit: Installed Engine Build: 0
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2017.05.02-09.32.00:066][  0]LogInit: Initializing SDL.
+[2017.05.02-09.32.02:079][  0]LogInit: Initialized SDL 2.0.4 revision: 10374 (hg-10374:dccf51aee79b with EpicExtensions) (compiled against 2.0.4)
+[2017.05.02-09.32.02:091][  0]LogInit: Display metrics:
+[2017.05.02-09.32.02:091][  0]LogInit:   PrimaryDisplayWidth: 1920
+[2017.05.02-09.32.02:091][  0]LogInit:   PrimaryDisplayHeight: 1080
+[2017.05.02-09.32.02:091][  0]LogInit:   PrimaryDisplayWorkAreaRect:
+[2017.05.02-09.32.02:091][  0]LogInit:     Left=0, Top=0, Right=1920, Bottom=1080
+[2017.05.02-09.32.02:091][  0]LogInit:   VirtualDisplayRect:
+[2017.05.02-09.32.02:091][  0]LogInit:     Left=0, Top=0, Right=1920, Bottom=1080
+[2017.05.02-09.32.02:091][  0]LogInit:   TitleSafePaddingSize: X=0.000 Y=0.000
+[2017.05.02-09.32.02:091][  0]LogInit:   ActionSafePaddingSize: X=0.000 Y=0.000
+[2017.05.02-09.32.02:091][  0]LogInit:   Number of monitors: 1
+[2017.05.02-09.32.02:091][  0]LogInit:     Monitor 0
+[2017.05.02-09.32.02:091][  0]LogInit:       Name: 0
+[2017.05.02-09.32.02:091][  0]LogInit:       ID: display0
+[2017.05.02-09.32.02:091][  0]LogInit:       NativeWidth: 1920
+[2017.05.02-09.32.02:091][  0]LogInit:       NativeHeight: 1080
+[2017.05.02-09.32.02:091][  0]LogInit:       bIsPrimary: true
+[2017.05.02-09.32.02:092][  0]LogLinux: Selected Device Profile: [Linux]
+[2017.05.02-09.32.02:092][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Linux]
+[2017.05.02-09.32.02:313][  0]LogInit: Linux hardware info:
+[2017.05.02-09.32.02:313][  0]LogInit:  - we are not the first instance of this executable
+[2017.05.02-09.32.02:313][  0]LogInit:  - this process' id (pid) is 1963, parent process' id (ppid) is 1
+[2017.05.02-09.32.02:313][  0]LogInit:  - we are not running under debugger
+[2017.05.02-09.32.02:313][  0]LogInit:  - machine network name is 'lapin'
+[2017.05.02-09.32.02:313][  0]LogInit:  - user name is 'ruhtra' (ruhtra)
+[2017.05.02-09.32.02:313][  0]LogInit:  - we're logged in locally
+[2017.05.02-09.32.02:313][  0]LogInit:  - we're running with rendering
+[2017.05.02-09.32.02:313][  0]LogInit:  - CPU: GenuineIntel 'Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz' (signature: 0x506E3)
+[2017.05.02-09.32.02:313][  0]LogInit:  - Number of physical cores available for the process: 4
+[2017.05.02-09.32.02:313][  0]LogInit:  - Number of logical cores available for the process: 4
+[2017.05.02-09.32.02:313][  0]LogInit:  - Cache line size: 64
+[2017.05.02-09.32.02:313][  0]LogInit:  - Memory allocator used: binned
+[2017.05.02-09.32.02:313][  0]LogLinux: Benchmarking clocks:
+[2017.05.02-09.32.02:313][  0]LogLinux:  - CLOCK_REALTIME (id=0) can sustain 41418682 (41419K, 41M) calls per second without zero deltas.
+[2017.05.02-09.32.02:313][  0]LogLinux:  - CLOCK_MONOTONIC (id=1) can sustain 43308746 (43309K, 43M) calls per second without zero deltas.
+[2017.05.02-09.32.02:313][  0]LogLinux:  - CLOCK_MONOTONIC_RAW (id=4) can sustain 10755713 (10756K, 11M) calls per second without zero deltas.
+[2017.05.02-09.32.02:313][  0]LogLinux:  - CLOCK_MONOTONIC_COARSE (id=6) can sustain 176739557 (176740K, 177M) calls per second with 99.999938% zero deltas.
+[2017.05.02-09.32.02:313][  0]LogLinux: Selected clock_id 1 (CLOCK_MONOTONIC) since it is the fastest support clock without zero deltas.
+[2017.05.02-09.32.02:313][  0]LogInit: Linux-specific commandline switches:
+[2017.05.02-09.32.02:313][  0]LogInit:  -nodwarf (currently OFF): suppress parsing of DWARF debug info (callstacks will be generated faster, but won't have line numbers)
+[2017.05.02-09.32.02:313][  0]LogInit:  -ansimalloc - use malloc()/free() from libc (useful for tools like valgrind and electric fence)
+[2017.05.02-09.32.02:313][  0]LogInit:  -jemalloc - use jemalloc for all memory allocation
+[2017.05.02-09.32.02:313][  0]LogInit:  -binnedmalloc - use binned malloc  for all memory allocation
+[2017.05.02-09.32.02:313][  0]LogInit:  -httpproxy=ADDRESS:PORT - redirects HTTP requests to a proxy (only supported if compiled with libcurl)
+[2017.05.02-09.32.02:313][  0]LogInit:  -reuseconn - allow libcurl to reuse HTTP connections (only matters if compiled with libcurl)
+[2017.05.02-09.32.02:313][  0]LogInit:  -virtmemkb=NUMBER - sets process virtual memory (address space) limit (overrides VirtualMemoryLimitInKB value from .ini)
+[2017.05.02-09.32.02:313][  0]LogInit:  - Physical RAM available (not considering process quota): 8 GB (7896 MB, 8086392 KB, 8280465408 bytes)
+[2017.05.02-09.32.02:331][  0]LogTextLocalizationManager: No specific translations for ('en-US') exist, so ('en') translations will be used.
+[2017.05.02-09.32.05:852][  0]LogRHI: Initializing OpenGL RHI
+[2017.05.02-09.32.05:852][  0]LogRHI:   GL_VENDOR: NVIDIA Corporation
+[2017.05.02-09.32.05:852][  0]LogRHI:   GL_RENDERER: GeForce GTX 970M/PCIe/SSE2
+[2017.05.02-09.32.05:852][  0]LogRHI:   GL_VERSION: 4.3.0 NVIDIA 378.13
+[2017.05.02-09.32.05:852][  0]LogRHI:   GL_SHADING_LANGUAGE_VERSION: 4.30 NVIDIA via Cg compiler
+[2017.05.02-09.32.05:853][  0]LogRHI: OpenGL Extensions:
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_AMD_multi_draw_indirect
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_AMD_seamless_cubemap_per_texture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_AMD_vertex_shader_viewport_index
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_AMD_vertex_shader_layer
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_arrays_of_arrays
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_base_instance
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_bindless_texture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_blend_func_extended
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_buffer_storage
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_clear_buffer_object
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_clear_texture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_clip_control
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_color_buffer_float
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_compressed_texture_pixel_storage
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_conservative_depth
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_compute_shader
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_compute_variable_group_size
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_conditional_render_inverted
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_copy_buffer
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_copy_image
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_cull_distance
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_debug_output
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_depth_buffer_float
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_depth_clamp
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_depth_texture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_derivative_control
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_direct_state_access
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_draw_buffers
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_draw_buffers_blend
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_draw_indirect
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_draw_elements_base_vertex
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_draw_instanced
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_enhanced_layouts
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_ES2_compatibility
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_ES3_compatibility
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_ES3_1_compatibility
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_ES3_2_compatibility
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_explicit_attrib_location
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_explicit_uniform_location
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_coord_conventions
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_layer_viewport
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_program
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_program_shadow
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_shader
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_fragment_shader_interlock
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_framebuffer_no_attachments
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_framebuffer_object
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_framebuffer_sRGB
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_geometry_shader4
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_get_program_binary
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_get_texture_sub_image
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_gl_spirv
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_gpu_shader5
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_gpu_shader_fp64
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_gpu_shader_int64
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_half_float_pixel
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_half_float_vertex
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_imaging
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_indirect_parameters
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_instanced_arrays
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_internalformat_query
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_internalformat_query2
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_invalidate_subdata
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_map_buffer_alignment
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_map_buffer_range
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_multi_bind
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_multi_draw_indirect
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_multisample
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_multitexture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_occlusion_query
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_occlusion_query2
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_parallel_shader_compile
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_pipeline_statistics_query
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_pixel_buffer_object
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_point_parameters
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_point_sprite
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_post_depth_coverage
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_program_interface_query
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_provoking_vertex
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_query_buffer_object
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_robust_buffer_access_behavior
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_robustness
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_sample_locations
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_sample_shading
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_sampler_objects
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_seamless_cube_map
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_seamless_cubemap_per_texture
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_separate_shader_objects
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_atomic_counter_ops
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_atomic_counters
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_ballot
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_bit_encoding
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_clock
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_draw_parameters
+[2017.05.02-09.32.05:853][  0]LogRHI:   GL_ARB_shader_group_vote
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_image_load_store
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_image_size
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_objects
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_precision
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_storage_buffer_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_subroutine
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_texture_image_samples
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_texture_lod
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shading_language_100
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shader_viewport_layer_array
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shading_language_420pack
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shading_language_include
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shading_language_packing
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_shadow
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_sparse_buffer
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_sparse_texture
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_sparse_texture2
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_sparse_texture_clamp
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_stencil_texturing
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_sync
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_tessellation_shader
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_barrier
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_border_clamp
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_buffer_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_buffer_object_rgb32
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_buffer_range
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_compression
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_compression_bptc
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_compression_rgtc
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_cube_map
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_cube_map_array
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_env_add
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_env_combine
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_env_crossbar
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_env_dot3
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_filter_minmax
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_float
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_gather
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_mirror_clamp_to_edge
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_mirrored_repeat
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_multisample
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_non_power_of_two
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_query_levels
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_query_lod
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_rectangle
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_rg
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_rgb10_a2ui
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_stencil8
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_storage
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_storage_multisample
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_swizzle
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_texture_view
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_timer_query
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_transform_feedback2
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_transform_feedback3
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_transform_feedback_instanced
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_transform_feedback_overflow_query
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_transpose_matrix
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_uniform_buffer_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_array_bgra
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_array_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_attrib_64bit
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_attrib_binding
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_buffer_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_program
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_shader
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_type_10f_11f_11f_rev
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_vertex_type_2_10_10_10_rev
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_viewport_array
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ARB_window_pos
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ATI_draw_buffers
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ATI_texture_float
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_ATI_texture_mirror_once
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_S3_s3tc
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_texture_env_add
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_abgr
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_bgra
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_bindable_uniform
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_blend_color
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_blend_equation_separate
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_blend_func_separate
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_blend_minmax
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_blend_subtract
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_compiled_vertex_array
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_Cg_shader
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_depth_bounds_test
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_direct_state_access
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_draw_buffers2
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_draw_instanced
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_draw_range_elements
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_fog_coord
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_framebuffer_blit
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_framebuffer_multisample
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXTX_framebuffer_mixed_formats
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_framebuffer_multisample_blit_scaled
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_framebuffer_object
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_framebuffer_sRGB
+[2017.05.02-09.32.05:854][  0]LogRHI:   GL_EXT_geometry_shader4
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_gpu_program_parameters
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_gpu_shader4
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_multi_draw_arrays
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_packed_depth_stencil
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_packed_float
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_packed_pixels
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_pixel_buffer_object
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_point_parameters
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_polygon_offset_clamp
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_post_depth_coverage
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_provoking_vertex
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_raster_multisample
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_rescale_normal
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_secondary_color
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_separate_shader_objects
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_separate_specular_color
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_shader_image_load_formatted
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_shader_image_load_store
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_shader_integer_mix
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_shadow_funcs
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_sparse_texture2
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_stencil_two_side
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_stencil_wrap
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture3D
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_array
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_buffer_object
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_compression_dxt1
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_compression_latc
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_compression_rgtc
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_compression_s3tc
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_cube_map
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_edge_clamp
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_env_combine
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_env_dot3
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_filter_anisotropic
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_filter_minmax
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_integer
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_lod
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_lod_bias
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_mirror_clamp
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_object
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_shared_exponent
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_sRGB
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_sRGB_decode
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_storage
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_texture_swizzle
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_timer_query
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_transform_feedback2
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_vertex_array
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_vertex_array_bgra
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_vertex_attrib_64bit
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_window_rectangles
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_x11_sync_object
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_EXT_import_sync_object
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_robustness_video_memory_purge
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_IBM_rasterpos_clip
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_IBM_texture_mirrored_repeat
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KHR_context_flush_control
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KHR_debug
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KHR_no_error
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KHR_robust_buffer_access_behavior
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KHR_robustness
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_KTX_buffer_region
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_alpha_to_coverage_dither_control
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_bindless_multi_draw_indirect
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_bindless_multi_draw_indirect_count
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_bindless_texture
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_blend_equation_advanced
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_blend_equation_advanced_coherent
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_blend_square
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_command_list
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_compute_program5
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_conditional_render
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_conservative_raster
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_conservative_raster_dilate
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_copy_depth_to_color
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_copy_image
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_depth_buffer_float
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_depth_clamp
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_draw_texture
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_draw_vulkan_image
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_ES1_1_compatibility
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_ES3_1_compatibility
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_explicit_multisample
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fence
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fill_rectangle
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_float_buffer
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fog_distance
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fragment_coverage_to_color
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fragment_program
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fragment_program_option
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fragment_program2
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_fragment_shader_interlock
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_framebuffer_mixed_samples
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_framebuffer_multisample_coverage
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_geometry_shader4
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_geometry_shader_passthrough
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_program4
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_internalformat_sample_query
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_program4_1
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_program5
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_program5_mem_extended
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_program_fp64
+[2017.05.02-09.32.05:855][  0]LogRHI:   GL_NV_gpu_shader5
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_half_float
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_light_max_exponent
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_multisample_coverage
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_multisample_filter_hint
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_occlusion_query
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_packed_depth_stencil
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_parameter_buffer_object
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_parameter_buffer_object2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_path_rendering
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_path_rendering_shared_edge
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_pixel_data_range
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_point_sprite
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_primitive_restart
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_register_combiners
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_register_combiners2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_sample_locations
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_sample_mask_override_coverage
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_atomic_counters
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_atomic_float
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_atomic_fp16_vector
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_atomic_int64
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_buffer_load
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_storage_buffer_object
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texgen_reflection
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_barrier
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_compression_vtc
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_env_combine4
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_multisample
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_rectangle
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_shader
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_shader2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_texture_shader3
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_transform_feedback
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_transform_feedback2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_uniform_buffer_unified_memory
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vdpau_interop
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_array_range
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_array_range2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_attrib_integer_64bit
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_buffer_unified_memory
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_program
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_program1_1
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_program2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_program2_option
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_vertex_program3
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_viewport_array2
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_viewport_swizzle
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NVX_conditional_render
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NVX_gpu_memory_info
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NVX_nvenc_interop
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_thread_group
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_NV_shader_thread_shuffle
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_KHR_blend_equation_advanced
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_KHR_blend_equation_advanced_coherent
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_SGIS_generate_mipmap
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_SGIS_texture_lod
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_SGIX_depth_texture
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_SGIX_shadow
+[2017.05.02-09.32.05:856][  0]LogRHI:   GL_SUN_slice_accum
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_TEXTURE_SIZE: 16384
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_CUBE_MAP_TEXTURE_SIZE: 16384
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_ARRAY_TEXTURE_LAYERS: 2048
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_3D_TEXTURE_SIZE: 2048
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_RENDERBUFFER_SIZE: 16384
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_DRAW_BUFFERS: 8
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_COLOR_ATTACHMENTS: 8
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_SAMPLES: 32
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_COLOR_TEXTURE_SAMPLES: 32
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_DEPTH_TEXTURE_SAMPLES: 32
+[2017.05.02-09.32.05:857][  0]LogRHI:   GL_MAX_INTEGER_SAMPLES: 32
+[2017.05.02-09.32.05:858][  0]LogRHI:   GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS: 192
+[2017.05.02-09.32.05:858][  0]LogRHI:   GL_MAX_VERTEX_ATTRIBS: 16
+[2017.05.02-09.32.05:858][  0]LogRHI:   GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[2017.05.02-09.32.05:858][  0]LogRHI: OpenGL MajorVersion = 4, MinorVersion = 3, ShaderPlatform = GLSL_430, FeatureLevel = SM5
+[2017.05.02-09.32.05:863][  0]LogRHI: Texture pool is 2150 MB (70% of 3072 MB)
+[2017.05.02-09.32.05:863][  0]LogShaderCompilers: Guid format shader working directory is 15 characters bigger than the processId version (../../../../../projets/E4-projet-gant/MyProject4/Intermediate/Shaders/WorkingDirectory/1963/).
+[2017.05.02-09.32.05:864][  0]LogShaderCompilers: Cleaned the shader compiler working directory '../../../../../projets/E4-projet-gant/MyProject4/Intermediate/Shaders/tmp/0003A44705050B020020035F3EC821D2/'.
+[2017.05.02-09.32.05:864][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2017.05.02-09.32.11:167][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2017.05.02-09.32.11:305][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2017.05.02-09.32.11:446][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2017.05.02-09.32.11:586][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2017.05.02-09.32.11:723][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2017.05.02-09.32.11:860][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2017.05.02-09.32.12:272][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2017.05.02-09.32.12:272][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2017.05.02-09.32.12:273][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2017.05.02-09.32.12:410][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2017.05.02-09.32.12:533][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2017.05.02-09.32.12:672][  0]LogTemp:Display: Loaded TP LinuxClientTargetPlatform
+[2017.05.02-09.32.12:810][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2017.05.02-09.32.12:924][  0]LogTemp:Display: Failed to get target platform HTML5TargetPlatform
+[2017.05.02-09.32.12:924][  0]LogTargetPlatformManager:Display: Building Assets For Linux
+[2017.05.02-09.32.13:191][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2017.05.02-09.32.13:226][  0]LogDerivedDataCache: Loaded boot cache 0.04s 60MB ../../../../../projets/E4-projet-gant/MyProject4/DerivedDataCache/Boot.ddc.
+[2017.05.02-09.32.13:226][  0]LogDerivedDataCache:Display: Loaded Boot cache: ../../../../../projets/E4-projet-gant/MyProject4/DerivedDataCache/Boot.ddc
+[2017.05.02-09.32.13:227][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../projets/E4-projet-gant/MyProject4/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.05.02-09.32.13:227][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2017.05.02-09.32.13:228][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnginePak pak cache file ../../../Engine/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.05.02-09.32.13:228][  0]LogDerivedDataCache: Unable to find inner node EnginePak for hierarchical cache Hierarchy.
+[2017.05.02-09.32.13:228][  0]LogDerivedDataCache: Using Local data cache path ../../../Engine/DerivedDataCache: Writable
+[2017.05.02-09.32.13:228][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2017.05.02-09.32.13:228][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2017.05.02-09.32.13:237][  0]LogSlate: Using Freetype 2.6.0
+[2017.05.02-09.32.13:239][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2017.05.02-09.32.13:239][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2017.05.02-09.32.13:484][  0]LogLinux: Selected Device Profile: [Linux]
+[2017.05.02-09.32.13:486][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2017.05.02-09.32.13:863][  0]LogMeshUtilities: Using QuadricMeshReduction for automatic static mesh reduction
+[2017.05.02-09.32.13:865][  0]LogMeshUtilities: No automatic skeletal mesh reduction module available
+[2017.05.02-09.32.13:865][  0]LogMeshUtilities: No automatic mesh merging module available
+[2017.05.02-09.32.13:865][  0]LogMeshUtilities: No distributed automatic mesh merging module available
+[2017.05.02-09.32.14:174][  0]LogNetVersion: GetLocalNetworkVersion: CL: 0, ProjectName: myproject4, ProjectVersion: , EngineNetworkVersion: 2, GameNetworkVersion: 0, NetworkChecksum: 787207796
+[2017.05.02-09.32.14:541][  0]LogAssetRegistry: FAssetRegistry took 0.0086 seconds to start up
+[2017.05.02-09.32.14:611][  0]LogPackageLocalizationCache: Processed 3 localized package path(s) for 2 prioritized culture(s) in 0.012832 seconds
+[2017.05.02-09.32.14:620][  0]LogUObjectArray: 32344 objects as part of root set at end of initial load.
+[2017.05.02-09.32.14:620][  0]LogUObjectAllocator: 7031192 out of 0 bytes used by permanent object pool.
+[2017.05.02-09.32.14:620][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2017.05.02-09.32.14:848][  0]LogHAL: Linux SourceCodeAccessSettings: NullSourceCodeAccessor
+[2017.05.02-09.32.18:248][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2017.05.02-09.32.20:847][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2017.05.02-09.32.21:684][  0]SourceControl: Info Source control is disabled
+[2017.05.02-09.32.21:684][  0]SourceControl: Info Source control is disabled
+[2017.05.02-09.32.21:692][  0]LogDesktopPlatform: DesktopPlatformLinux is not using LinuxNativeDialogs.
+[2017.05.02-09.32.21:825][  0]SourceControl: Info Source control is disabled
+[2017.05.02-09.32.22:459][  0]SourceControl: Info Source control is disabled
+[2017.05.02-09.32.22:784][  0]LogEngine: Initializing Engine...
+[2017.05.02-09.32.23:324][  0]LogAIModule: Creating AISystem for world Untitled
+[2017.05.02-09.32.23:335][  0]LogALAudio: ALAudio device opened : OpenAL Soft
+[2017.05.02-09.32.23:337][  0]LogALAudio: AL_VENDOR      : OpenAL Community
+[2017.05.02-09.32.23:337][  0]LogALAudio: AL_RENDERER    : OpenAL Soft
+[2017.05.02-09.32.23:337][  0]LogALAudio: AL_VERSION     : 1.1 ALSOFT 1.15.1
+[2017.05.02-09.32.23:337][  0]LogALAudio: AL_EXTENSIONS  : AL_EXT_ALAW AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_LOKI_quadriphonic AL_SOFT_buffer_samples AL_SOFT_buffer_sub_data AL_SOFTX_deferred_updates AL_SOFT_direct_channels AL_SOFT_loop_points AL_SOFT_source_latency
+[2017.05.02-09.32.23:337][  0]LogInit: FAudioDevice initialized.
+[2017.05.02-09.32.23:376][  0]LogDerivedDataCache: Saved boot cache 0.04s 60MB ../../../../../projets/E4-projet-gant/MyProject4/DerivedDataCache/Boot.ddc.
+[2017.05.02-09.32.23:385][  0]LogInit: Texture streaming: Enabled
+[2017.05.02-09.32.23:870][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2017.05.02-09.32.24:574][  0]LogInit: Transaction tracking system initialized
+[2017.05.02-09.32.25:514][  0]BlueprintLog: New page: Editor Load
+[2017.05.02-09.32.27:801][  0]LocalizationService: Info Localization service is disabled
+[2017.05.02-09.32.28:735][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2017.05.02-09.32.29:584][  0]LogConsoleResponse:Display: 
+[2017.05.02-09.32.29:698][  0]LogFileCache: Scanning file cache for directory '/home/ruhtra/projets/E4-projet-gant/MyProject4/Content/' took 0.00s
+[2017.05.02-09.32.29:699][  0]LogCook:Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2017.05.02-09.32.29:699][  0]LogCook:Display: Mobile HDR setting 1
+[2017.05.02-09.32.31:834][  0]SourceControl: Info Source control is disabled
+[2017.05.02-09.32.31:834][  0]Cmd: MAP LOAD FILE="../../../../../projets/E4-projet-gant/MyProject4/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2017.05.02-09.32.31:835][  0]LightingResults: New page: Lighting Build
+[2017.05.02-09.32.31:932][  0]MapCheck: New page: Map Check
+[2017.05.02-09.32.31:932][  0]LightingResults: New page: Lighting Build
+[2017.05.02-09.32.32:377][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2017.05.02-09.32.32:384][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.05.02-09.32.32:385][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.05.02-09.32.32:398][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 13.657ms to complete.
+[2017.05.02-09.32.32:399][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.565
+[2017.05.02-09.32.32:840][  0]LogCollectionManager: Loaded 0 collections in 0.000801 seconds
+[2017.05.02-09.32.32:856][  0]LogFileCache: Scanning file cache for directory '/home/ruhtra/projets/E4-projet-gant/MyProject4/Saved/Collections/' took 0.00s
+[2017.05.02-09.32.32:856][  0]LogFileCache: Scanning file cache for directory '/home/ruhtra/projets/E4-projet-gant/MyProject4/Content/Developers/ruhtra/Collections/' took 0.00s
+[2017.05.02-09.32.32:856][  0]LogFileCache: Scanning file cache for directory '/home/ruhtra/projets/E4-projet-gant/MyProject4/Content/Collections/' took 0.00s
+[2017.05.02-09.32.32:856][  0]LogContentBrowser: Native class hierarchy populated in 0.0122 seconds. Added 2232 classes and 429 folders.
+[2017.05.02-09.32.32:859][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2017.05.02-09.32.32:958][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2017.05.02-09.32.32:958][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2017.05.02-09.32.33:087][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0009 seconds. Added 0 classes and 0 folders.
+[2017.05.02-09.32.33:109][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0009 seconds. Added 0 classes and 0 folders.
+[2017.05.02-09.32.33:220][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0008 seconds. Added 1 classes and 2 folders.
+[2017.05.02-09.32.33:301][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2017.05.02-09.32.33:377][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2017.05.02-09.32.33:523][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0010 seconds. Added 1 classes and 2 folders.
+[2017.05.02-09.32.33:524][  0]LogLoad: (Engine Initialization) Total time: 35.54 seconds
+[2017.05.02-09.32.33:524][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.15 seconds
+[2017.05.02-09.32.33:524][  0]LogExternalProfiler: No external profilers were discovered.  External profiling features will not be available.
+[2017.05.02-09.32.33:860][  0]LogSlate: Took 0.000140 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2017.05.02-09.32.33:887][  0]LogSlate: Took 0.000222 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2017.05.02-09.32.33:896][  0]LogSlate: Took 0.000147 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2017.05.02-09.32.34:016][  0]LogRenderer: Reallocating scene render targets to support 588x560 NumSamples 1 (Frame:2).
+[2017.05.02-09.32.34:145][  0]LogLinux: Setting swap interval to 'Immediate'
+[2017.05.02-09.32.34:145][  0]LogLinux:Warning: Unable to set desired swap interval 'Immediate'
+[2017.05.02-09.32.34:194][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2017.05.02-09.32.34:301][  0]LogSlate: Took 0.000056 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2017.05.02-09.32.34:317][  1]LogAssetRegistry: Asset discovery search completed in 19.7847 seconds
+[2017.05.02-09.32.34:317][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2017.05.02-09.32.34:317][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000058 seconds (updated 0 objects)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: request failed, libcurl error: 51 (SSL peer certificate or SSH remote key was not OK)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 0 (  Trying 34.192.111.22...)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 1 (Connected to datarouter.ol.epicgames.com (34.192.111.22) port 443 (#9))
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 2 (Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 3 (successfully set certificate verify locations:)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 4 (  CAfile: /etc/ssl/certs/ca-certificates.crt  CApath: none)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 5 (TLSv1.2 (OUT), TLS Unknown, Certificate Status (22):)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 6 (TLSv1.2 (OUT), TLS handshake, Client hello (1):)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 7 (TLSv1.0 (IN), TLS handshake, Server hello (2):)
+[2017.05.02-09.33.34:184][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 8 (TLSv1.0 (IN), TLS handshake, Certificate (11):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 9 (TLSv1.0 (IN), TLS handshake, Server key exchange (12):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 10 (TLSv1.0 (IN), TLS handshake, Server finished (14):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 11 (TLSv1.0 (OUT), TLS handshake, Client key exchange (16):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 12 (TLSv1.0 (OUT), TLS change cipher, Client hello (1):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 13 (TLSv1.0 (OUT), TLS handshake, Finished (20):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 14 (TLSv1.0 (IN), TLS change cipher, Client hello (1):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 15 (TLSv1.0 (IN), TLS handshake, Finished (20):)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 16 (SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 17 (Server certificate:)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 18 ( subject: C=FR; ST=Hauts-de-Seine; L=Montrouge; O=UCOPIA Communications; CN=controller.access.network)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 19 ( start date: Mar 26 13:55:14 2015 GMT)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 20 ( expire date: Mar 26 13:55:14 2018 GMT)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 21 ( subjectAltName does not match datarouter.ol.epicgames.com)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 22 (SSL: no alternative certificate subject name matches target host name 'datarouter.ol.epicgames.com')
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 23 (Closing connection 9)
+[2017.05.02-09.33.34:185][296]LogHttp:Warning: 0x7f5ca294b300: libcurl info message cache 24 (TLSv1.0 (OUT), TLS alert, Client hello (1):)
+[2017.05.02-09.34.34:184][476]LogHttp:Warning: 0x7f5c78493e80: request failed, libcurl error: 51 (SSL peer certificate or SSH remote key was not OK)
+[2017.05.02-09.34.34:184][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2017.05.02-09.34.34:184][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 1 (  Trying 52.20.65.72...)
+[2017.05.02-09.34.34:184][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.20.65.72) port 443 (#10))
+[2017.05.02-09.34.34:184][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 3 (Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 4 (successfully set certificate verify locations:)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 5 (  CAfile: /etc/ssl/certs/ca-certificates.crt  CApath: none)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 6 (SSL re-using session ID)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 7 (TLSv1.0 (OUT), TLS handshake, Client hello (1):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 8 (TLSv1.0 (IN), TLS handshake, Server hello (2):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 9 (TLSv1.0 (IN), TLS change cipher, Client hello (1):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 10 (TLSv1.0 (IN), TLS handshake, Finished (20):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 11 (TLSv1.0 (OUT), TLS change cipher, Client hello (1):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 12 (TLSv1.0 (OUT), TLS handshake, Finished (20):)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 13 (SSL connection using TLSv1.0 / DHE-RSA-AES256-SHA)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 14 (Server certificate:)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 15 ( subject: C=FR; ST=Hauts-de-Seine; L=Montrouge; O=UCOPIA Communications; CN=controller.access.network)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 16 ( start date: Mar 26 13:55:14 2015 GMT)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 17 ( expire date: Mar 26 13:55:14 2018 GMT)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 18 ( subjectAltName does not match datarouter.ol.epicgames.com)
+[2017.05.02-09.34.34:185][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 19 (SSL: no alternative certificate subject name matches target host name 'datarouter.ol.epicgames.com')
+[2017.05.02-09.34.34:186][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 20 (Closing connection 10)
+[2017.05.02-09.34.34:186][476]LogHttp:Warning: 0x7f5c78493e80: libcurl info message cache 21 (TLSv1.0 (OUT), TLS alert, Client hello (1):)

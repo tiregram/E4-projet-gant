@@ -1,9 +1,0 @@
-{
-	"Changelist" : 0,
-	"BuildId" : "",
-	"Modules" : 
-	{
-		"SubstanceCore" : "libUE4Editor-SubstanceCore.so",
-		"SubstanceEditor" : "libUE4Editor-SubstanceEditor.so"
-	}
-}

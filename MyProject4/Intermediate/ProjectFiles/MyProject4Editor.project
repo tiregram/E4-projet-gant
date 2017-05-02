@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="MyProject4Editor">
+  <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" />
+  <VirtualDirectory Name="Source">
+    <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4.Target.cs" />
+    <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4Editor.Target.cs" />
+    <VirtualDirectory Name="MyProject4">
+      <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4.Build.cs" />
+      <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4.cpp" />
+      <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4.h" />
+      <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4GameModeBase.cpp" />
+      <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Source/MyProject4/MyProject4GameModeBase.h" />
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Config">
+    <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Config/DefaultEditor.ini" />
+    <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Config/DefaultEngine.ini" />
+    <File Name="/home/ruhtra/Documents/Unreal Projects/MyProject4/Config/DefaultGame.ini" />
+  </VirtualDirectory>
+  <Settings>
+    <Settings />
+    <Configuration Name="Debug">
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <CustomBuild Enabled="yes">
+        <WorkingDirectory>/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/DotNET</WorkingDirectory>
+        <BuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Debug -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</BuildCommand>
+        <CleanCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Debug -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean</CleanCommand>
+        <RebuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Debug -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean
+mono UnrealBuildTool.exe MyProject4Editor Linux Debug -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</RebuildCommand>
+      </CustomBuild>
+    </Configuration>
+    <Configuration Name="DebugGame">
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <CustomBuild Enabled="yes">
+        <WorkingDirectory>/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/DotNET</WorkingDirectory>
+        <BuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux DebugGame -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</BuildCommand>
+        <CleanCommand>mono UnrealBuildTool.exe MyProject4Editor Linux DebugGame -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean</CleanCommand>
+        <RebuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux DebugGame -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean
+mono UnrealBuildTool.exe MyProject4Editor Linux DebugGame -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</RebuildCommand>
+      </CustomBuild>
+    </Configuration>
+    <Configuration Name="Development">
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <CustomBuild Enabled="yes">
+        <WorkingDirectory>/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/DotNET</WorkingDirectory>
+        <BuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Development -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</BuildCommand>
+        <CleanCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Development -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean</CleanCommand>
+        <RebuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Development -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean
+mono UnrealBuildTool.exe MyProject4Editor Linux Development -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</RebuildCommand>
+      </CustomBuild>
+    </Configuration>
+    <Configuration Name="Shipping">
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <CustomBuild Enabled="yes">
+        <WorkingDirectory>/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/DotNET</WorkingDirectory>
+        <BuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Shipping -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</BuildCommand>
+        <CleanCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Shipping -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean</CleanCommand>
+        <RebuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Shipping -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean
+mono UnrealBuildTool.exe MyProject4Editor Linux Shipping -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</RebuildCommand>
+      </CustomBuild>
+    </Configuration>
+    <Configuration Name="Test">
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <General CommandArguments="&quot;/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject&quot; -game" WorkingDirectory="/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux" Command="./UE4Editor" />
+      <CustomBuild Enabled="yes">
+        <WorkingDirectory>/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/DotNET</WorkingDirectory>
+        <BuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Test -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</BuildCommand>
+        <CleanCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Test -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean</CleanCommand>
+        <RebuildCommand>mono UnrealBuildTool.exe MyProject4Editor Linux Test -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject" -clean
+mono UnrealBuildTool.exe MyProject4Editor Linux Test -project="/home/ruhtra/Documents/Unreal Projects/MyProject4/MyProject4.uproject"</RebuildCommand>
+      </CustomBuild>
+    </Configuration>
+    <GlobalSettings />
+  </Settings>
+</CodeLite_Project>

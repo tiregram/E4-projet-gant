@@ -1,0 +1,39 @@
+Generating report for minidump
+
+Application version 4.15.1.0
+ ... built from changelist 0
+
+OS version Linux 4.9.25-1-lts (network name: lapin)
+Running 4 x86_64 processors (4 logical cores)
+Exception was "SIGABRT: abort() called"
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+Unknown!FLinuxPlatformStackWalk::CaptureStackBackTrace(unsigned long long*, unsigned int, void*) + some bytes
+Unknown!FGenericPlatformStackWalk::StackWalkAndDump(char*, unsigned long, int, void*) + some bytes
+Unknown!FLinuxCrashContext::CaptureStackTrace() + some bytes
+Unknown!CommonLinuxCrashHandler(FGenericCrashContext const&) + some bytes
+Unknown!PlatformCrashHandler(int, siginfo_t*, void*) + some bytes
+Unknown!/usr/lib/libpthread.so.0(+0x11fe0) [0x7f1f89966fe0] + some bytes
+Unknown!/usr/lib/libc.so.6(gsignal+0x110) [0x7f1f79107a10] + some bytes
+Unknown!/usr/lib/libc.so.6(abort+0x17a) [0x7f1f7910913a] + some bytes
+Unknown!/usr/lib/libc.so.6(+0x722b0) [0x7f1f791462b0] + some bytes
+Unknown!/usr/lib/libc.so.6(+0x7890e) [0x7f1f7914c90e] + some bytes
+Unknown!/usr/lib/libc.so.6(+0x7911e) [0x7f1f7914d11e] + some bytes
+Unknown!FOpenGLRHIState::CleanupResources() + some bytes
+Unknown!FOpenGLDynamicRHI::Cleanup() + some bytes
+Unknown!FOpenGLDynamicRHI::Shutdown() + some bytes
+Unknown!RHIExit() + some bytes
+/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux/UE4Editor!FEngineLoop::Exit() + some bytes [/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Source/Runtime/Launch/Private/LaunchEngineLoop.cpp:319]
+/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux/UE4Editor!GuardedMain(wchar_t const*) + some bytes [/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Source/Runtime/Launch/Private/Launch.cpp:178]
+Unknown!CommonLinuxMain(int, char**, int (*)(wchar_t const*)) + some bytes
+Unknown!/usr/lib/libc.so.6(__libc_start_main+0xf1) [0x7f1f790f4511] + some bytes
+Unknown!/home/ruhtra/Downloads/UnrealEngine-4.15.1-release/Engine/Binaries/Linux/UE4Editor(_start+0x2a) [0x4153ba] + some bytes
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!
