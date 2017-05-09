@@ -21,7 +21,9 @@ FILE(
   src/*
   )
 
+list(REMOVE_ITEM file_prj "src/test.cpp")
 add_executable(test.bin ${file_prj})
+add_library(wmlib STATIC SHARED ${file_prj})
 
 target_link_libraries(test.bin "X11")
 target_link_libraries(test.bin ${SDL_LIBRARY})
