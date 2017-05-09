@@ -19,7 +19,7 @@ namespace Xlib {
   }
 }
 using namespace Xlib;
-G::XWindow::XWindow(XDisplay* display, Xlib::Window win):window_natif(win),display(display),geo(*this),event()
+G::XWindow::XWindow(XDisplay* display, Xlib::Window win):window_natif(win),display(display),geo(*this),event(*this)
 {
   this->geo.update();
 }

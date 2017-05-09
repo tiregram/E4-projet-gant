@@ -1,15 +1,49 @@
 #pragma once
 
 #include "../Event.hpp"
+#include <cstdlib>
+
+namespace Xlib {
+  extern "C" {
+
+#include <X11/Xlib.h>
+
+#include <X11/keysym.h>
+
+#define KEYCODE XK_Down
+  }
+}
 
 namespace G{
-  class XEvent : public G::Event
+  class XWindow;
+
+  class XEvent : public ::G::Event
   {
+  private:
+
+    XWindow& window;
 
   public:
-    XEvent();
+    XEvent(XWindow&);
     virtual ~XEvent();
 
-    void key_press(char C) const override;
+
+
+    // xlib create event //////////////////////////////////////////////////////
+    Xlib::XKeyEvent createKeyEvent(bool press,
+                                   int keycode,
+                                   int modifiers) const ;
+
+    Xlib::XButtonEvent createMouseEvent(bool press,
+                                        int keycode,
+                                        int modifiers) const;
+
+
+    // event method ///////////////////////////////////////////////////////////
+    virtual void key_press(char C) const;
+    virtual void key_release(char C) const;
+
+    virtual void mouse_press() const;
+    virtual void mouse_release() const;
   };
 }

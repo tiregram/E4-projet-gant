@@ -28,8 +28,13 @@ namespace G {
     Xlib::Window window_natif;
 
   public:
+    const XDisplay* get_display() const {
+      return display;
+    }
+
     G::XGeometry geo;
     G::XEvent event;
+    XDisplay* display;
 
     const Xlib::Window get_window_natif() const {
       return window_natif;
@@ -42,7 +47,7 @@ namespace G {
     G::Geometry& get_geo_manager() override;
     G::Event& get_event_manager() override;
 
-    XDisplay* display;
+
     XWindow(XDisplay* display,Xlib::Window win);
 
     virtual ~XWindow();
