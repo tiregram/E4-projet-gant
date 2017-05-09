@@ -33,15 +33,22 @@ list(REMOVE_ITEM file_lib ${file_test})
 add_library(wmlib_static STATIC ${file_lib})
 add_library(wmlib_shared SHARED ${file_lib})
 
+
+# mise en place des tests #####################################################
 foreach(loop_var ${file_test})
 
+  # get name
   string(FIND ${loop_var} "test" pos REVERSE)
   string(SUBSTRING ${loop_var} ${pos} -1 name)
 
+  # add executable
   add_executable(${name}.bin ${loop_var})
+
+  # link
   target_link_libraries(${name}.bin "X11")
   target_link_libraries(${name}.bin wmlib_shared)
   target_link_libraries(${name}.bin ${SDL_LIBRARY})
+
 endforeach(loop_var)
 
 
