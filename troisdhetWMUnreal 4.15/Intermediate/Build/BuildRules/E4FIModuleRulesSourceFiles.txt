@@ -1,0 +1,3 @@
+/home/ruhtra/projets/E4-projet-gant/troisdhetWMUnreal 4.15/Source/E4FI/E4FI.Build.cs
+/home/ruhtra/projets/E4-projet-gant/troisdhetWMUnreal 4.15/Source/E4FI.Target.cs
+/home/ruhtra/projets/E4-projet-gant/troisdhetWMUnreal 4.15/Source/E4FIEditor.Target.cs
