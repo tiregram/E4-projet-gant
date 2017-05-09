@@ -2,6 +2,7 @@
 #include "XDisplay.hpp"
 #include "XWindow.hpp"
 #include <iostream>
+
 namespace G {
 
   XGeometry::XGeometry( XWindow& w):Geometry(),window(w) {
