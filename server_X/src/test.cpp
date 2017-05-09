@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
       std::cout << *a << "\n"
                 <<"event... \n";
       a->get_event_manager().key_press('a');
+      a->get_event_manager().key_release('a');
 
       // G::Geometry& g = a->get_geo_manager();
       // g.set_width(100);
@@ -30,7 +31,6 @@ int main(int argc, char *argv[])
       // g.apply();
 
     }
-
   }
   catch (std::exception err) {
     std::cerr << err.what() << "\n";
