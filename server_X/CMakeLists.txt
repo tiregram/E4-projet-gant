@@ -21,7 +21,6 @@ FILE(
   src/*
   )
 
-
 FILE(
   GLOB_RECURSE
   file_test
