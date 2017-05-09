@@ -35,13 +35,17 @@ list(REMOVE_ITEM file_lib ${file_test})
 add_library(launcher_shared SHARED ${file_lib})
 add_library(launcher_static STATIC ${file_lib})
 
+# mise en place des tests #####################################################
 foreach(loop_var ${file_test})
 
+  # get name
   string(FIND ${loop_var} "test" pos REVERSE)
   string(SUBSTRING ${loop_var} ${pos} -1 name)
 
+  # add executable
   add_executable(${name}.bin ${loop_var})
 
+  # link
   target_link_libraries(${name}.bin ${LIBSSH_LIBRARIES})
   target_link_libraries(${name}.bin launcher_shared)
 endforeach(loop_var)
