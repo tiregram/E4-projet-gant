@@ -1,5 +1,0 @@
-/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Source/E4FI/E4FI.Build.cs
-/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Plugins/Runtime/Substance/Source/SubstanceCore/SubstanceCore.Build.cs
-/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Plugins/Runtime/Substance/Source/SubstanceEditor/SubstanceEditor.Build.cs
-/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Source/E4FI.Target.cs
-/home/ruhtra/projets/E4-projet-gant/3DWMUnreal/Source/E4FIEditor.Target.cs
