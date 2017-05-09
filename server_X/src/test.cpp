@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
 		int rc = launcher->show_remote_files();
 		// int rc = launcher->shell_session();
 
-		std::cout << "Return Code From SSH Connection" << rc << '\n';
+		std::cout << "Return Code From SSH Connection : " << rc << '\n';
 	} catch(std::exception err) {
 		std::cerr << err.what() << "\n";
 	}
