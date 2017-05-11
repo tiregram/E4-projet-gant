@@ -95,13 +95,14 @@ namespace G {
 
           if (status == Success && prop_ret )
             {
-              std::cout << "status:" << status
-                        << ", " << da
-                        << ", " << di
-                        << ", " << dl
-                        << ", " << dl2
-                        << ", " << *((long*)prop_ret)
-                        << "\n";
+            //   std::cout << "status:" << status
+            //             << ", " << da
+            //             << ", " << di
+            //             << ", " << dl
+            //             << ", " << dl2
+            //             << ", " << *((long*)prop_ret)
+            //             << "\n";
+            //
             }
 
           Xlib::XFree(prop_ret);
