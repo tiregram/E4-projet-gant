@@ -28,7 +28,7 @@ namespace G {
   class XDisplay : public G::Display
   {
   private:
-    Xlib::Window * children_return;
+
     unsigned int  nb;
 
   public:

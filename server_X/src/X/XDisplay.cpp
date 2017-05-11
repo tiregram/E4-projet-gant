@@ -104,6 +104,8 @@ namespace G {
                         << "\n";
             }
 
+          Xlib::XFree(prop_ret);
+
         }
 
       Xlib::XFree(data);
@@ -151,6 +153,7 @@ namespace G {
           auto xw = std::make_shared<G::XWindow>(this,w);
           ret_list.push_back(xw);
         }
+      Xlib::XFree(data);
     }
     else{
       std::cout <<"no win"  << "\n";
@@ -161,6 +164,7 @@ namespace G {
 
   XDisplay::~XDisplay()
   {
+    free(this->col);
     Xlib::XCloseDisplay(this->xdisplay_natif);
   }
 
