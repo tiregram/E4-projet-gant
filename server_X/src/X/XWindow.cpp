@@ -115,6 +115,61 @@ std::string G::XWindow::getProperties(const std::string& str_NAME) const
 
 }
 
+
+void G::XWindow::get_screen(uint8_t* data)
+{
+
+  auto& gm = this->get_geo_manager();
+
+  Xlib::XColor a ;
+  unsigned long plane_mask = 0Xffffffff;
+  unsigned format = XYPixmap;
+
+  std::cout << gm  << "\n";
+
+  XImage * img = Xlib::XGetImage(this->get_display()->xdisplay_natif,
+                                 this->window_natif,
+                                 gm.get_x(),
+                                 gm.get_y(),
+                                 gm.get_width(),
+                                 gm.get_height(),
+                                 plane_mask,ZPixmap);
+
+  for(unsigned int x = 0; x < 100 ; x++){
+    for(unsigned int y = 0; y <100  ; y++  ){
+
+      unsigned int pi =  XGetPixel(img, x, y);
+
+      if( this->get_display()->col[pi].i == 0)
+        {
+          a.pixel = pi;
+          Xlib::XQueryColor(this->get_display()->xdisplay_natif,
+                            this->get_display()->cmap,
+                            &a);
+
+          this->get_display()->col[pi].i = 1;
+          this->get_display()->col[pi].r = a.red;
+          this->get_display()->col[pi].g = a.green;
+          this->get_display()->col[pi].b = a.blue;
+
+
+          std::cout << "nb:" <<pi  << "\n";
+        }
+
+      Mycolor mc  = this->get_display()->col[pi]  ;
+      *(data++) =  0xFF; // a
+      *(data++) =  mc.r;// r
+      *(data++) =  mc.g;// g
+      *(data++) =  mc.b; // b
+
+    }
+  }
+
+  Xlib::XFree(img);
+
+}
+
+
 G::Event& G::XWindow::get_event_manager()
 {
 

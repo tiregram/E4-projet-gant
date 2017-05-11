@@ -2,12 +2,14 @@
 #define G_LIB_WINDOW
 
 #include <string>
+#include <cstdint>
+
 
 namespace G {
 
   class Geometry;
   class Event;
-  
+
   class Window
   {
     double xyz[3];
@@ -18,7 +20,10 @@ namespace G {
     virtual std::string  getName() const= 0;
     virtual G::Geometry& get_geo_manager() = 0;
     virtual G::Event& get_event_manager() = 0;
+
     virtual void print(std::ostream&) =0;
+
+    virtual void get_screen(uint8_t* data)= 0;
   };
 }
 

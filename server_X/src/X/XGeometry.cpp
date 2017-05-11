@@ -67,7 +67,6 @@ namespace G {
        break;
      }
 
-     this->print(std::cout);
   }
 
   void XGeometry::print(std::ostream& os) const

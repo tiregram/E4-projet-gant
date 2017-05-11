@@ -1,7 +1,4 @@
 #include <string>
-extern "C" {
-#include <SDL/SDL.h>
-}
 #include <stdlib.h>
 #include <iostream>
 #include <memory>

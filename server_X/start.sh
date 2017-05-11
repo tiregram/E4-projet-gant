@@ -2,17 +2,22 @@
 
 # this script server run the X server.
 
-vari=$(ps -C xpra --no-headers );
+vari=$(ps -C Xvfb --no-headers );
 if [ "$vari" != "" ];
 then
     echo "___KILL_SERVER___"
-    killall xpra 2> /dev/null > null
+    killall Xvfb 2> /dev/null > null
     sleep 1
 fi
 
 echo "___SERVER_START___"
-xpra start :99
+
+#xpra start :99
+#xpra start :99 --pulseaudio=no --mdns=no --use-display
+
+Xvfb :99 -listen tcp -ac > log/log_xvfb.log &
 sleep 1
+DISPLAY=:99 evilwm > log/log_evilwm.log &
 
 echo "___cacafire___"
 DISPLAY=":99" cacafire 2> /dev/null > /dev/null &
