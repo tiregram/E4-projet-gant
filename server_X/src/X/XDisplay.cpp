@@ -1,8 +1,4 @@
 
-extern "C" {
-#include <SDL/SDL.h>
-}
-
 #include <exception>
 #include <memory.h>
 
@@ -13,8 +9,6 @@ namespace Xlib {
 #include <X11/Xatom.h>
   }
 }
-
-extern void paint(SDL_Surface *surface, int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 
 
 using namespace Xlib;
@@ -117,6 +111,10 @@ namespace G {
     else{
       std::cout <<"no o lapin"  << "\n";
     }
+
+    cmap = DefaultColormap(this->xdisplay_natif,
+                           DefaultScreen(this->xdisplay_natif));
+
   }
 
   std::vector<std::shared_ptr<G::Window>> XDisplay::get_windows_list()

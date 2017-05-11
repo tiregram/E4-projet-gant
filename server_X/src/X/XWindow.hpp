@@ -5,6 +5,7 @@
 
 #include "XGeometry.hpp"
 #include "XEvent.hpp"
+#include <cstdint>
 
 namespace Xlib {
   extern "C" {
@@ -61,8 +62,12 @@ namespace G {
 
     void print(std::ostream&)   override;
 
+    
     unsigned int getId() const;
     unsigned int getPID() const;
+
+    virtual void get_screen(uint8_t* data);
+    
 
     std::string getProperties(const std::string& str_NAME) const;
   };

@@ -4,10 +4,8 @@
 #include "../Display.hpp"
 
 #include <string>
+#include <cstdint>
 
-extern "C" {
-#include <SDL/SDL.h>
-}
 
 namespace Xlib {
   extern "C" {
@@ -18,10 +16,10 @@ namespace Xlib {
 
 
 typedef struct {
-  Uint8 i;
-  Uint8 r;
-  Uint8 g;
-  Uint8 b;
+  uint8_t i;
+  uint8_t r;
+  uint8_t g;
+  uint8_t b;
 } Mycolor;
 
 
@@ -32,12 +30,11 @@ namespace G {
   private:
     Xlib::Window * children_return;
     unsigned int  nb;
+
+  public:
     Mycolor* col;
     Xlib::Colormap cmap;
 
-
-
-  public:
     Xlib::Display* xdisplay_natif;
     XDisplay(std::string& pname, std::string& paddr);
     virtual ~XDisplay();

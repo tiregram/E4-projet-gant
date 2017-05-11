@@ -32,7 +32,7 @@ ompiled Object files
 # Bin  
 *.bin
 */bin/*
-
+*/log/*
 
 # cmake
 */CMakeCache.txt
