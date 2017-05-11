@@ -1,7 +1,4 @@
 #include <string>
-extern "C" {
-#include <SDL/SDL.h>
-}
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstdlib>
@@ -10,23 +7,27 @@ extern "C" {
 #include "X/XDisplay.hpp"
 #include "X/XWindow.hpp"
 
+#include <ctime>
+
 int main(int argc, char* argv[]) {
 
 	std::string name = "xvfb";
 	std::string addr = ":99";
 	std::shared_ptr<G::Display> di;
+  uint8_t data[100*100*4];
 
 	try {
 	    di = std::make_shared<G::XDisplay>(name, addr);
 
 	    for(auto a : di->get_windows_list()) {
-	        std::cout << *a << "\n"
-	                  << "try to change size... \n";
+        clock_t begin = std::clock();
 
-	        // G::Geometry& g = a->get_geo_manager();
-	        // g.set_width(100);
-	        // g.set_height(100);
-	        // g.apply();
+        a->get_screen(data);
+
+        clock_t end = std::clock();
+        double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+        std::cout <<"time: "<<elapsed_secs << " s"  << "\n";
+
 	    }
 
 	} catch(std::exception err) {

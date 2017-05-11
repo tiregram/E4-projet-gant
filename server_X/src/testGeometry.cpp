@@ -1,7 +1,6 @@
 #include <string>
-extern "C" {
-#include <SDL/SDL.h>
-}
+
+
 #include <stdlib.h>
 #include <iostream>
 #include <memory>
@@ -18,13 +17,16 @@ int main(int argc, char *argv[])
 
   try {
     di = std::make_shared<G::XDisplay>(name,addr);
-
+    int XX =0;
     for (auto a : di->get_windows_list()) {
-      std::cout << *a
-                <<"event... \n";
-      a->get_event_manager().key_press('a');
-      a->get_event_manager().key_release('a');
 
+      G::Geometry& g = a->get_geo_manager();
+      g.set_x(XX);
+      g.set_width(100);
+      g.set_height(100);
+      g.apply();
+
+      XX+= 100;
     }
   }
   catch (std::exception err) {
