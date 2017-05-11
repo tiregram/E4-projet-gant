@@ -33,7 +33,7 @@ G::XWindow::~XWindow() {
 }
 
 std::string G::XWindow::getName() const {
-    return this->getProperties("WM_NAME");
+  return this->getProperties("WM_NAME");
 }
 
 unsigned int G::XWindow::getPID() const{
