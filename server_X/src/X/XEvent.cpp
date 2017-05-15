@@ -1,12 +1,12 @@
 
 #include "XEvent.hpp"
 
-#include "XDisplay.hpp"
-#include "XWindow.hpp"
+
 #include <stdlib.h>
 #include <iostream>
 
-
+#include "XDisplay.hpp"
+#include "XWindow.hpp"
 
 
 G::XEvent::XEvent(XWindow& w):Event(),window(w) {

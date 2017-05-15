@@ -9,9 +9,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
+find_package(X11 REQUIRED)
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include_directories ("${PROJECT_SOURCE_DIR}/")
+include_directories(${X11_INCLUDE_DIR})
 
 FILE(
   GLOB_RECURSE
@@ -42,8 +45,8 @@ foreach(loop_var ${file_test})
   add_executable(${name}.bin ${loop_var})
 
   # link
-  target_link_libraries(${name}.bin "X11")
   target_link_libraries(${name}.bin wmlib_shared)
+  target_link_libraries(${name}.bin ${X11_LIBRARIES})
 
 endforeach(loop_var)
 

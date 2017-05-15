@@ -2,6 +2,14 @@
 #include <exception>
 #include <memory.h>
 
+
+#include <bitset>
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <memory>
+
+
 namespace Xlib {
   extern "C" {
 #include <X11/X.h>
@@ -10,17 +18,10 @@ namespace Xlib {
   }
 }
 
-
 using namespace Xlib;
-#include <bitset>
-#include <iostream>
-#include <cstdlib>
-#include <string>
-#include <memory>
+#include "XDisplay.hpp"
 
 #include "../Display.hpp"
-#include "XApp.hpp"
-#include "XDisplay.hpp"
 #include "XWindow.hpp"
 
 namespace G {
