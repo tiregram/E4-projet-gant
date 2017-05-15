@@ -1,15 +1,13 @@
 #pragma once
 
 #include "../Event.hpp"
+
 #include <cstdlib>
 
 namespace Xlib {
   extern "C" {
-
 #include <X11/Xlib.h>
-
 #include <X11/keysym.h>
-
 #define KEYCODE XK_Down
   }
 }

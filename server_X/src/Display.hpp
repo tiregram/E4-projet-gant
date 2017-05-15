@@ -1,11 +1,10 @@
 #ifndef G_LIB_DISPLAY
 #define G_LIB_DISPLAY
 
-#include <map>
 #include <string>
 #include <vector>
 #include <memory>
-#include "App.hpp"
+
 
 namespace G {
   class Window;
