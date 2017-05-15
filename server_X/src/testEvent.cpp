@@ -1,10 +1,9 @@
+
 #include <string>
-extern "C" {
-#include <SDL/SDL.h>
-}
 #include <stdlib.h>
 #include <iostream>
 #include <memory>
+
 #include "X/XDisplay.hpp"
 #include "X/XWindow.hpp"
 
