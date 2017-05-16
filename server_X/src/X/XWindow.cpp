@@ -13,11 +13,11 @@
 
 namespace Xlib {
   extern "C" {
-#include <X11/X.h>
-#include <X11/Xutil.h>
+#include <X11/Xlib.h>
 #include <X11/Xatom.h>
   }
 }
+
 using namespace Xlib;
 G::XWindow::XWindow(XDisplay* display, Xlib::Window win):window_natif(win),display(display),geo(*this),event(*this)
 {
