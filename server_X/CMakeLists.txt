@@ -13,8 +13,15 @@ find_package(X11 REQUIRED)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-include_directories ("${PROJECT_SOURCE_DIR}/lib")
-include_directories(${X11_INCLUDE_DIR})
+
+
+
+if (X11_FOUND)
+  include_directories(${X11_INCLUDE_DIR})
+else()
+  include_directories ("${PROJECT_SOURCE_DIR}/lib")
+endif()
+
 
 FILE(
   GLOB_RECURSE
@@ -33,6 +40,13 @@ list(REMOVE_ITEM file_lib ${file_test})
 add_library(wmlib_static STATIC ${file_lib})
 add_library(wmlib_shared SHARED ${file_lib})
 
+if (X11_FOUND)
+  target_link_libraries(wmlib_shared ${X11_LIBRARIES})
+  target_link_libraries(wmlib_static ${X11_LIBRARIES})
+else()
+  # TODO
+endif()
+
 
 # mise en place des tests #####################################################
 foreach(loop_var ${file_test})
@@ -49,6 +63,10 @@ foreach(loop_var ${file_test})
   target_link_libraries(${name}.bin ${X11_LIBRARIES})
 
 endforeach(loop_var)
+
+
+
+
 
 
 
