@@ -1,7 +1,6 @@
 
 #include "XEvent.hpp"
 
-
 #include <stdlib.h>
 #include <iostream>
 

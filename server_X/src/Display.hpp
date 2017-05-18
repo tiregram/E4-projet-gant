@@ -5,7 +5,6 @@
 #include <vector>
 #include <memory>
 
-
 namespace G {
   class Window;
 

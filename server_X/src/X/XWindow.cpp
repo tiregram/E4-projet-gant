@@ -13,6 +13,7 @@
 
 namespace Xlib {
   extern "C" {
+
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
   }

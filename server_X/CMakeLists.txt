@@ -4,6 +4,7 @@ project (POO)
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
 set (PROJECT_SOURCE_DIR src)
+
 set (CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -13,15 +14,11 @@ find_package(X11 REQUIRED)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-
-
-
 if (X11_FOUND)
   include_directories(${X11_INCLUDE_DIR})
 else()
   include_directories ("${PROJECT_SOURCE_DIR}/lib")
 endif()
-
 
 FILE(
   GLOB_RECURSE
@@ -47,7 +44,6 @@ else()
   # TODO
 endif()
 
-
 # mise en place des tests #####################################################
 foreach(loop_var ${file_test})
 
@@ -59,16 +55,9 @@ foreach(loop_var ${file_test})
   add_executable(${name}.bin ${loop_var})
 
   # link
+
   target_link_libraries(${name}.bin wmlib_shared)
   target_link_libraries(${name}.bin ${X11_LIBRARIES})
 
 endforeach(loop_var)
-
-
-
-
-
-
-
-
 

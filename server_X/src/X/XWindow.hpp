@@ -1,6 +1,7 @@
 #ifndef G_LIB_XWINDOW
 #define G_LIB_XWINDOW
 #include <memory>
+
 #include "../Window.hpp"
 
 #include "XGeometry.hpp"
