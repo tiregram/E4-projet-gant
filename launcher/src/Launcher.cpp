@@ -6,20 +6,23 @@
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
 
-G::Launcher::Launcher() {
+G::Launcher::Launcher(const void* host, int port, std::string display) {
 
 	std::cout << "Create Launcher" << '\n';
 
 	this->session = ssh_new();
 	int verbosity = SSH_LOG_PROTOCOL;
-	int port = 22;
+	// int port = 22;
+	this->port = port;
+	this->host = host;
+	this->display = display;
 	int rc;
 
 	if(this->session == NULL)
 		exit(-1);
 
 	// ssh_options_set(this->session, SSH_OPTIONS_HOST, "192.168.43.179");
-	ssh_options_set(this->session, SSH_OPTIONS_HOST, "localhost");
+	ssh_options_set(this->session, SSH_OPTIONS_HOST, host);
 	ssh_options_set(this->session, SSH_OPTIONS_LOG_VERBOSITY, &verbosity);
 	ssh_options_set(this->session, SSH_OPTIONS_PORT, &port);
 
@@ -53,9 +56,9 @@ G::Launcher::~Launcher() {
 
 	ssh_disconnect(this->session);
 	ssh_free(this->session);
-}
+};
 
-int G::Launcher::show_remote_files() {
+int G::Launcher::compute_application_list() {
 
 	const std::string NAME = "Name=";
 	const std::string EXEC = "Exec=";
@@ -67,7 +70,6 @@ int G::Launcher::show_remote_files() {
 	if(channel == NULL) {
 		return SSH_ERROR;
 	}
-	std::cout << "1st" << '\n';
 
 	rc = ssh_channel_open_session(channel);
 	if(rc != SSH_OK) {
@@ -75,7 +77,6 @@ int G::Launcher::show_remote_files() {
 	} else {
 		this->channels.push_back(channel);
 	}
-	std::cout << "2nd" << '\n';
 
 	std::string str = "find /usr/share/applications -name \"*.desktop\" -print | xargs cat |grep "
 	                  "\"^Comment=|^Name=|^Exec=\" -E";
@@ -87,7 +88,6 @@ int G::Launcher::show_remote_files() {
 	if(rc != SSH_OK) {
 		return rc;
 	}
-	std::cout << "3rd" << '\n';
 
 	std::vector<std::string> founds;
 	std::string tmp_last = "";
@@ -115,46 +115,70 @@ int G::Launcher::show_remote_files() {
 	if(nbytes < 0) {
 		return SSH_ERROR;
 	}
-	std::cout << "4th" << '\n';
 
-	Application tmp;
+	std::shared_ptr<G::Application> tmp;
 
 	for(int i = 0; i < founds.size(); i++) {
 
 		if(founds[i].find(NAME) != std::string::npos) {
 			founds[i].erase(0, NAME.size());
-			std::cout << "New Application : " << '\n';
-			std::cout << "NAME : " << founds[i] << '\n';
-			tmp = Application();
-			tmp.name = founds[i];
+			// std::cout << "New Application : " << '\n';
+			// std::cout << "NAME : " << founds[i] << '\n';
+			tmp = std::make_shared<G::Application>();
+			tmp->name = founds[i];
 			this->applications.push_back(tmp);
 		}
 
 		if(founds[i].find(COMMENT) != std::string::npos) {
 			founds[i].erase(0, COMMENT.size());
-			std::cout << "COMMENT : " << founds[i] << '\n';
-			tmp.comment = founds[i];
+			// std::cout << "COMMENT : " << founds[i] << '\n';
+			tmp->comment = founds[i];
 		}
 
 		if(founds[i].find(EXEC) != std::string::npos) {
 			founds[i].erase(0, EXEC.size());
-			std::cout << "EXEC : " << founds[i] << '\n';
-			tmp.exec = founds[i];
+			// std::cout << "EXEC : " << founds[i] << '\n';
+			tmp->exec = founds[i];
 		}
 	}
 
 	return SSH_OK;
-}
+};
 
-int G::Launcher::shell_session() {
+std::vector<std::shared_ptr<G::Application>> G::Launcher::get_applications_list() {
+	if(this->applications.size() == 0)
+		this->compute_application_list();
+
+	return this->applications;
+};
+
+int G::Launcher::launch(std::shared_ptr<Application> app) {
+
+	const std::string DISPLAY_PREFIX = "DISPLAY=:";
+
 	ssh_channel channel;
 	int rc;
 	channel = ssh_channel_new(this->session);
-	if(channel == NULL)
+	if(channel == NULL) {
 		return SSH_ERROR;
+	}
+
 	rc = ssh_channel_open_session(channel);
 	if(rc != SSH_OK) {
 		return rc;
+	} else {
+		this->channels.push_back(channel);
 	}
+
+	std::string cmd = std::string(DISPLAY_PREFIX + this->display) + " " + app->exec + " & echo $!";
+	std::cout << "COMMANDE : " << cmd << '\n';
+	rc = ssh_channel_request_exec(channel, cmd.c_str());
+	std::cout << "RETURN STATUS : " << rc << '\n';
+	if(rc != SSH_OK) {
+		return rc;
+	}
+
+	std::cout << "Launche Application : " << app->name << '\n';
+
 	return SSH_OK;
-}
+};
