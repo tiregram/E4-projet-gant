@@ -8,7 +8,6 @@
 #include <string>
 #include <memory>
 
-
 namespace Xlib {
   extern "C" {
 #include <X11/Xlib.h>
@@ -29,7 +28,11 @@ namespace G {
     :Display(pname)
   {
     // TODO: gestion propre des couleurs
-    this->col = (Mycolor*) malloc(sizeof(Mycolor)*1000);
+    this->col = (Mycolor*) malloc(sizeof(Mycolor) * 3000);
+
+    for (int i = 0; i < 30000; i++) {
+      this->col[i].i == 0;
+    }
 
     ///////////////////////////////////////////////////////////////////////////
     //                 open the connection with the X server                 //
@@ -39,7 +42,7 @@ namespace G {
     if (this->xdisplay_natif == NULL)
       {
         std::cerr <<"Impossible d'ouvrir le Display"  << "\n";
-        throw  std::runtime_error( "Erreur: Pas de display avec " + pname + " et addr :" + paddr);
+        throw  std::runtime_error( "Erreur: Pas de display avec " + pname + " et addr : " + paddr);
       }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -118,6 +121,7 @@ namespace G {
     cmap = DefaultColormap(this->xdisplay_natif,
                            DefaultScreen(this->xdisplay_natif));
 
+    std::cout<<"color map"<<cmap<<"\n";
   }
 
   std::vector<std::shared_ptr<G::Window>> XDisplay::get_windows_list()

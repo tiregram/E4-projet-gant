@@ -25,22 +25,24 @@ namespace G{
     virtual ~XEvent();
 
 
+    Xlib::XKeyEvent create_key_event(int keycode,
+                                   bool press_or_release) const ;
 
-    // xlib create event //////////////////////////////////////////////////////
-    Xlib::XKeyEvent createKeyEvent(bool press,
-                                   int keycode,
-                                   int modifiers) const ;
-
-    Xlib::XButtonEvent createMouseEvent(bool press,
-                                        int keycode,
-                                        int modifiers) const;
+    Xlib::XButtonEvent create_mouse_event(
+                                          int keycode,
+                                          bool press_or_release,
+                                          int x,
+                                          int y);
 
 
-    // event method ///////////////////////////////////////////////////////////
-    virtual void key_press(char C) const;
-    virtual void key_release(char C) const;
+    void  send_event(Xlib::XEvent* event_to_send) const;
 
-    virtual void mouse_press() const;
-    virtual void mouse_release() const;
+    void key_mouvement(unsigned int keycode,
+                       bool press_or_release) const override;
+
+    void mouse_click(unsigned int  ButtonNumber,
+                     bool press_or_release ,
+                     int x,
+                     int y) override;
   };
 }

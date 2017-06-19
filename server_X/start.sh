@@ -19,11 +19,15 @@ Xvfb :99 -listen tcp -ac > log/log_xvfb.log &
 sleep 1
 DISPLAY=:99 evilwm > log/log_evilwm.log &
 
-echo "___cacafire___"
-DISPLAY=":99" cacafire 2> /dev/null > /dev/null &
+# echo "___cacafire___"
+# DISPLAY=":99" cacafire 2> /dev/null > /dev/null &
 
-echo "___cacademo___"
-DISPLAY=":99" cacademo  2> /dev/null > /dev/null &
+# echo "___cacademo___"
+# DISPLAY=":99" cacademo  2> /dev/null > /dev/null &
 
+# echo "___XTERM___"
+# DISPLAY=":99" xterm  2> /dev/null > /dev/null &
 echo "___XTERM___"
-DISPLAY=":99" xterm  2> /dev/null > /dev/null &
+DISPLAY=":99" gedit  2> /dev/null > /dev/null &
+
+

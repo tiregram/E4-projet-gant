@@ -1,5 +1,6 @@
 
 cmake_minimum_required (VERSION 2.8)
+
 project (POO)
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
@@ -7,12 +8,12 @@ set (PROJECT_SOURCE_DIR src)
 
 set (CMAKE_CXX_STANDARD 11)
 
-# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
-# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 find_package(X11 REQUIRED)
 
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 if (X11_FOUND)
   include_directories(${X11_INCLUDE_DIR})
@@ -20,18 +21,19 @@ else()
   include_directories ("${PROJECT_SOURCE_DIR}/lib")
 endif()
 
- FILE(
+FILE(
   GLOB_RECURSE
   file_lib
-  ${PROJECT_SOURCE_DIR}/*
+  ${CMAKE_SOURCE_DIR}/src/*
   )
 
 FILE(
   GLOB_RECURSE
   file_test
-  ${PROJECT_SOURCE_DIR}/test*
+  ${CMAKE_SOURCE_DIR}/src/test*
   )
 
+message(lapin ${file_test} lapin  ${CMAKE_SOURCE_DIR})
 
 list(REMOVE_ITEM file_lib ${file_test})
 

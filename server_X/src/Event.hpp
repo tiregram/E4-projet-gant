@@ -8,10 +8,15 @@ namespace G {
     Event();
     virtual ~Event();
 
-    virtual void key_press(char C) const=0;
-    virtual void key_release(char C) const=0;
 
-    virtual void mouse_press() const=0;
-    virtual void mouse_release() const=0;
+
+    virtual void mouse_click(unsigned int  ButtonNumber,
+                             bool press_or_release ,
+                             int x,
+                             int y);
+
+    virtual void key_mouvement(unsigned int keycode,
+                               bool press_or_release) const;
+
   };
 }

@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
     for (auto a : di->get_windows_list()) {
       std::cout << *a << "\n"
                 <<"event... \n";
-      a->get_event_manager().key_press('a');
-      a->get_event_manager().key_release('a');
+      // a->get_event_manager().key_press('a');
+      // a->get_event_manager().key_release('a');
 
       // G::Geometry& g = a->get_geo_manager();
       // g.set_width(100);

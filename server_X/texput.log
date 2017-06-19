@@ -1,0 +1,17 @@
+This is TeXk, Version 3.14159265 (TeX Live 2016/Arch Linux) (preloaded format=tex 2017.5.17)  2 JUN 2017 17:31
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&tex
+
+*
+! Interruption.
+<*> 
+    
+? qqq
+OK, entering \batchmode...
+! Emergency stop.
+<*> 
+    
+*** (job aborted, no legal \end found)
+
+No pages of output.

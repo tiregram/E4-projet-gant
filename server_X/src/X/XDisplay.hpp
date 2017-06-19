@@ -32,7 +32,9 @@ namespace G {
     unsigned int  nb;
 
   public:
+    //    Mycolor* col;
     Mycolor* col;
+
     Xlib::Colormap cmap;
 
     Xlib::Display* xdisplay_natif;

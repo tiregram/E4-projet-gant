@@ -123,10 +123,7 @@ void G::XWindow::get_screen(uint8_t* data)
   auto& gm = this->get_geo_manager();
 
   Xlib::XColor a ;
-  unsigned long plane_mask = 0Xffffffff;
-  unsigned format = XYPixmap;
-
-  std::cout << gm  << "\n";
+  unsigned long plane_mask = 0X00ffffff;
 
   XImage * img = Xlib::XGetImage(this->get_display()->xdisplay_natif,
                                  this->window_natif,
@@ -134,10 +131,11 @@ void G::XWindow::get_screen(uint8_t* data)
                                  gm.get_y(),
                                  gm.get_width(),
                                  gm.get_height(),
-                                 plane_mask,ZPixmap);
+                                 plane_mask,
+                                 ZPixmap);
 
-  for(unsigned int x = 0; x < 100 ; x++){
-    for(unsigned int y = 0; y <100  ; y++  ){
+  for(unsigned int x = 0; x < gm.get_width() ; x++){
+    for(unsigned int y = 0; y <gm.get_height() ; y++  ){
 
       unsigned int pi =  XGetPixel(img, x, y);
 
@@ -148,26 +146,27 @@ void G::XWindow::get_screen(uint8_t* data)
                             this->get_display()->cmap,
                             &a);
 
+
+
           this->get_display()->col[pi].i = 1;
           this->get_display()->col[pi].r = a.red;
           this->get_display()->col[pi].g = a.green;
           this->get_display()->col[pi].b = a.blue;
 
-
           std::cout << "nb:" <<pi  << "\n";
         }
 
       Mycolor mc  = this->get_display()->col[pi]  ;
-      *(data++) =  0xFF; // a
-      *(data++) =  mc.r;// r
-      *(data++) =  mc.g;// g
-      *(data++) =  mc.b; // b
+
+      *(data++) =  mc.b;// r
+      *(data++) = mc.g;// g
+      *(data++) = mc.r;// mc.b;//mc.b; // b
+      *(data++) =  0; // a
 
     }
   }
 
   Xlib::XFree(img);
-
 }
 
 
